@@ -1,0 +1,163 @@
+<div class="page">
+  <div class="divided title">
+    Confirmation
+  </div>
+
+  <div class="ui stackable page grid">
+    <div class="column">
+
+      <div class="ui form">
+
+        <div class="divided title">Basic Information</div>
+
+        <fieldset ng-disabled="pastConfirmation">
+
+          <div class="field">
+            <label> What is your phone number? (format: xxx-xxx-xxxx) </label>
+            <p>
+              Don’t worry, we’ll only use it for emergency contacts/updates.
+            </p>
+            <input type="tel"
+                   name="phone"
+                   ng-model="user.confirmation.phoneNumber"
+                   ng-pattern="/?\d{3}[- ]?\d{3}[- ]?\d{4}$/"
+                   placeholder="xxx-xxx-xxxx"              
+                   required>
+          </div>
+
+          <div class="field">
+            <label> Dietary Restrictions </label>
+
+            <p>
+              If your restriction is not included here, please let us know in the additional notes at the bottom.
+            </p>
+            <p>
+              We'll make sure you get fed :)
+            </p>
+
+            <div class="ui checkbox">
+              <input name="vegetarian" type="checkbox" id="vegetarian" ng-model="user.confirmation.vegetarian">
+              <label for="vegetarian">Vegetarian</label>
+            </div>
+
+            <br>
+
+            <div class="ui checkbox">
+              <input name="vegan" type="checkbox" id="vegan" ng-model="user.confirmation.vegan">
+              <label for="vegan">Vegan</label>
+            </div>
+            
+            <br>
+
+            <div class="ui checkbox">
+              <input name="glutenfree" type="checkbox" id="glutenfree" ng-model="user.confirmation.glutenfree">
+              <label for="glutenfree">Gluten Free</label>
+            </div>
+
+
+          </div>
+
+
+          <div class="field">
+            <label> Shirt Size (required) </label>
+            <p>
+              Yay free clothes! Heads up, these will be women's size shirts, so they tend to run small. 
+            </p>
+            <select
+              name="shirt"
+              ng-model="user.confirmation.shirtSize"
+              required>
+              <option value="">Shirt Size</option>
+              <option value="XS">X-Small</option>
+              <option value="S">Small</option>
+              <option value="M">Medium</option>
+              <option value="L">Large</option>
+              <option value="XL">X-Large</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label> Resume Link </label>
+            <p>You don't have to, but we would love it if you did. :) Don't forget to make sure the link is visible to the public if you're uploading it to Google Drive!</p>
+            <input type="text"
+                   name="resume"
+                   placeholder="https://drive.google.com/foobar"
+                   ng-model="user.confirmation.resume">
+          </div>
+
+          <br>
+          <br>
+
+          <div class="divided title">Travel</div>
+
+          <div class="field">
+            <p>
+              We’ll be sending buses free of charge to Irvine, San Diego, San Luis Obispo, and Pasadena. Head back to the dashboard to read our full travel policy.
+            </p>
+          </div>
+
+          <div class="field">
+            <label> Will you need a bus spot from any of these locations? </label>
+            <select
+              name="bus"
+              ng-model="user.confirmation.bus"
+              required>
+              <option value="No">No</option>
+              <option value="UCSD">UCSD </option>
+              <option value="UCI">UCI</option>
+              <option value="CalPolySLO">Cal Poly SLO</option>
+              <option value="CalPolyPomona">Cal Poly Pomona</option>
+              <option value="CalTech">Cal Tech</option>
+            </select>
+          </div>
+
+          <br>
+          <br> 
+          <div class="divided title">Emergency Contact (Safety First!)</div>
+
+          <div class="field">
+            <label> Emergency contact name </label>
+            
+            <input type="text"
+                   name="econtact"
+                   ng-model="user.confirmation.econtact"
+                   required>
+          </div>
+
+          <div class="field">
+            <label> Emergency contact number </label>
+            
+            <input type="tel"
+                   name="enumber"
+                   ng-model="user.confirmation.enumber"
+                   placeholder="xxx-xxx-xxxx"
+                   required>
+          </div>
+
+          <br>
+          <br>
+
+          <div class="divided title">Additional Notes</div>
+
+          <div class="field">
+            
+            <p>
+              If there's anything else you need to let us know, tell us here!
+            </p>
+            <textarea
+              ng-model="user.confirmation.notes"></textarea>
+          </div>
+
+          <div class="field" ng-hide="regIsClosed">
+            <button type="submit"
+                    class="fluid ui purple button"
+                    ng-click="submitForm()">
+              Submit
+            </button>
+          </div>
+
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</div>

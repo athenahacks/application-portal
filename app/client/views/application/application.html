@@ -1,0 +1,183 @@
+<div id="application" class="page">
+  <div class="divided title">
+    Application
+  </div>
+
+  <div class="ui stackable page grid">
+    <div class="column">
+      <div class="ui form"
+            ng-class="{'loading': loading}">
+
+        <div class="divided title">Basic Information</div>
+
+        <fieldset ng-disabled="regIsClosed">
+
+        <div class="field">
+          <label> First Name </label>
+          <input type="text"
+                  name="fname"
+                  ng-model="user.profile.fname">
+        </div>
+
+        <div class="field">
+          <label> Last Name </label>
+          <input type="text"
+                  name="lname"
+                  ng-model="user.profile.lname">
+        </div>
+        
+        <div class="field">
+          <label> Email </label>
+          <input type="email"
+                 name="email"
+                 ng-model="user.email">
+        </div>
+
+        <div class="field" ng-show="autoFilledSchool">
+          <label> School </label>
+          <input class="ui input"
+                 disabled="disabled"
+                 ng-show="autoFilledSchool"
+                 ng-model="user.profile.school">
+        </div>
+
+        <div class="field" ng-show="!autoFilledSchool">
+          <label> School </label>
+          <div id="school" class="ui search">
+            <div class="ui input">
+              <input class="prompt" type="text" placeholder="School" name="school" ng-model="user.profile.school">                
+            </div>
+            <div class="results"></div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Grade Level</label>
+          <select
+            name="grade"
+            ng-model="user.profile.grade">
+            <option value="HighSchool">High School </option>
+            <option value="Freshman">Freshman</option>
+            <option value="Sophomore">Sophomore</option>
+            <option value="Junior">Junior</option>
+            <option value="Senior">Senior</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label> If you're in college, what are you studying (majors and/or minors)? If you're in high school, what are you thinking of studying? </label>
+          <input type="text"
+                 name="major"
+                 placeholder="Computer Science, Product Design, Underwater Basket Weaving, etc."
+                 ng-model="user.profile.major">
+        </div>
+
+        <div class="field">
+          <label>Gender</label>
+          <select
+            name="gender"
+            ng-model="user.profile.gender">         
+            <option value="Female">Female</option>
+            <option value="Trans">Trans</option>
+            <option value="NonBinary">Non-Binary</option>
+            <option value="PreferNotToAnswer">Prefer not to answer</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Ethnicity</label>
+          <select
+            name="ethnicity"
+            ng-model="user.profile.ethnicity">
+            <option value="Asian">Asian or Pacific Islander</option>
+            <option value="African">African</option>
+            <option value="Caucasian">Caucasian</option>
+            <option value="Hispanic">Hispanic/Latinx</option>
+            <option value="Other">Other</option>
+            <option value="PreferNotToAnswer">Prefer Not To Answer</option>
+          </select>
+        </div>
+        
+        <br>
+        <br>
+
+        <div class="divided title">Hackathon Questions</div>
+
+        <div class="field">
+          <label> How many hackathons have you attended? </label>
+          <p>We're just curious! We love all hackers, beginners and experts. :) If AthenaHacks will be your first: 1) we're honored! 2) enter '0' as your answer</p>
+          <input type="number"
+                 name="hacks"
+                 ng-model="user.profile.hacks">
+        </div>
+
+        <div class="field">
+          <label>
+            Have you attended AthenaHacks before?
+          </label>
+          <p>
+            If so, welcome back!
+          </p>
+          <div class="ui checkbox">
+            <input type="checkbox" id="attended" ng-model="user.profile.attended">
+            <label for="adult">Yes, I have!</label>
+          </div>
+        </div>
+        
+        <div class="field">
+          <label>
+            Why do you want to attend AthenaHacks?
+          </label>
+          <p>
+            Your answer can be as long or as short as you like. We just want to get to know you!
+          </p>
+          <textarea ng-model="user.profile.essay">
+          </textarea>
+        </div>
+
+        <div class="field">
+          <label>
+            What excites you?
+          </label>
+          <p>
+            We want to make AthenaHacks an amazing learning experience for you! You don't need any experience in any of the following topics. That's what we're here for!
+          </p>
+          <textarea ng-model="user.profile.topic" placeholder="iOS development, Android development, Web development, Design, Games, Hardware, Project/Product Management, Data Analytics, Robotics, VR/AR">
+          </textarea>
+        </div>
+
+        <div class="field">
+          <label> Please share some links about you to help us get to know you better? (e.g. personal website, LinkedIn, Github, Devpost, resume) </label>
+          <p>If you don't have any of the above, that's totally cool! Just share a couple sentences about what your interests are or things you have done/projects you have worked on in the past. (big or small!)</p>
+          <textarea ng-model="user.profile.links">
+          </textarea>
+        </div>
+
+        <div class="field">
+          <label>
+            Will you be 18 or older by April 6th, 2019?
+          </label>
+          <p>
+            No worries if you won't be 18 by then, we welcome minors as well!
+          </p>
+          <div class="ui checkbox">
+            <input type="checkbox" id="adult" ng-model="user.profile.adult">
+            <label for="adult">Yes, I will be 18 or older.</label>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="field" ng-hide="regIsClosed">
+          <button type="submit"
+                  class="fluid ui purple button"
+                  ng-click="submitForm()">
+            Submit
+          </button>
+        </div>
+
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</div>
