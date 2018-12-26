@@ -110,10 +110,7 @@
             <br>
             No: {{stats.bus['No']}} <br>
             UCSD: {{stats.bus['UCSD']}} <br>
-            UCI: {{stats.bus['UCI']}} <br>
-            CalPolySLO: {{stats.bus['CalPolySLO']}} <br>
-            CalPolyPomona: {{stats.bus['CalPolyPomona']}} <br>
-            CalTech: {{stats.bus['CalTech']}} <br>
+
           </div>
         </div>
 
@@ -125,9 +122,10 @@
             <strong>
               Dietary Restrictions:
             </strong>
-            Vegan: {{stats.vegan}} <br>
-            Vegetarian: {{stats.vegetarian}} <br>
-            Gluten Free: {{stats.glutenfree}} <br>
+            <span
+              ng-repeat="restriction in stats.dietaryRestrictions | orderBy: '-count'">
+              {{restriction.name}} ({{restriction.count}})
+            </span>
           </div>
         </div>
 
@@ -151,67 +149,43 @@
       <div class="item">
         <i class="female icon"></i>
         <div class="content">
-          <strong>Female</strong>: {{stats.demo.gender['Female']}} ({{stats.demo.gender['Female'] / stats.total * 100 | number:1}}%)
+          <strong>Female</strong>: {{stats.demo.gender['F']}} ({{stats.demo.gender['F'] / stats.total * 100 | number:1}}%)
         </div>
       </div>
       <div class="item">
-        <i class="female icon"></i>
+        <i class="male icon"></i>
         <div class="content">
-          <strong>Trans</strong>: {{stats.demo.gender['Trans']}} ({{stats.demo.gender['Trans'] / stats.total * 100 | number:1}}%)
+          <strong>Male</strong>: {{stats.demo.gender['M']}} ({{stats.demo.gender['M'] / stats.total * 100 | number:1}}%)
         </div>
       </div>
       <div class="item">
         <i class="other gender icon"></i>
         <div class="content">
-          <strong>NonBinary</strong>: {{stats.demo.gender['NonBinary']}} ({{stats.demo.gender['NonBinary'] / stats.total * 100 | number:1}}%)
+          <strong>Other</strong>: {{stats.demo.gender['O']}} ({{stats.demo.gender['O'] / stats.total * 100 | number:1}}%)
         </div>
       </div>
       <div class="item">
         <i class="question icon"></i>
         <div class="content">
-          <strong>Prefer Not To Answer</strong>: {{stats.demo.gender['PreferNotToAnswer']}} ({{stats.demo.gender['PreferNotToAnswer'] / stats.total * 100 | number:1 }}%)
+          <strong>Did not respond</strong>: {{stats.demo.gender['N']}} ({{stats.demo.gender['N'] / stats.total * 100 | number:1 }}%)
         </div>
       </div>
     </div>
     <div class="ui divider"></div>
-    <div class="ui list">
-      <div class="item">
-        <strong>High School:</strong> {{stats.demo.grade['HighSchool']}} ({{stats.demo.grade['HighSchool'] / stats.total * 100 | number: 1}}%)
+      <div class="ui list">
+        <div class="item">
+          <strong>Fresh:</strong> {{stats.demo.year['2019']}} ({{stats.demo.year['2019'] / stats.total * 100 | number: 1}}%)
+        </div>
+        <div class="item">
+          <strong>Soph:</strong> {{stats.demo.year['2018']}} ({{stats.demo.year['2018'] / stats.total * 100 | number: 1}}%)
+        </div>
+        <div class="item">
+         <strong>Junior:</strong> {{stats.demo.year['2017']}} ({{stats.demo.year['2017'] / stats.total * 100 | number: 1}}%)
+        </div>
+        <div class="item">
+          <strong>Senior:</strong> {{stats.demo.year['2016']}} ({{stats.demo.year['2016'] / stats.total * 100 | number: 1}}%)
+        </div>
       </div>
-      <div class="item">
-        <strong>Freshman:</strong> {{stats.demo.grade['Freshman']}} ({{stats.demo.grade['Freshman'] / stats.total * 100 | number: 1}}%)
-      </div>
-      <div class="item">
-        <strong>Sophomore:</strong> {{stats.demo.grade['Sophomore']}} ({{stats.demo.grade['Sophomore'] / stats.total * 100 | number: 1}}%)
-      </div>
-      <div class="item">
-        <strong>Junior:</strong> {{stats.demo.grade['Junior']}} ({{stats.demo.grade['Junior'] / stats.total * 100 | number: 1}}%)
-      </div>
-      <div class="item">
-        <strong>Senior:</strong> {{stats.demo.grade['Senior']}} ({{stats.demo.grade['Senior'] / stats.total * 100 | number: 1}}%)
-      </div>
-    </div>
-    <div class="ui divider"></div>
-    <div class="ui list">
-      <div class="item">
-        <strong>Asian:</strong> {{stats.demo.ethnicity['Asian']}} ({{stats.demo.ethnicity['Asian'] / stats.total * 100 | number: 1}}%)
-      </div>
-      <div class="item">
-        <strong>African:</strong> {{stats.demo.ethnicity['African']}} ({{stats.demo.ethnicity['African'] / stats.total * 100 | number: 1}}%)
-      </div>
-      <div class="item">
-        <strong>Caucasian:</strong> {{stats.demo.ethnicity['Caucasian']}} ({{stats.demo.ethnicity['Caucasian'] / stats.total * 100 | number: 1}}%)
-      </div>
-      <div class="item">
-        <strong>Hispanic:</strong> {{stats.demo.ethnicity['Hispanic']}} ({{stats.demo.ethnicity['Hispanic'] / stats.total * 100 | number: 1}}%)
-      </div>
-      <div class="item">
-        <strong>Other:</strong> {{stats.demo.ethnicity['Other']}} ({{stats.demo.ethnicity['Other'] / stats.total * 100 | number: 1}}%)
-      </div>
-      <div class="item">
-        <strong>Prefer Not To Answer:</strong> {{stats.demo.ethnicity['PreferNotToAnswer']}} ({{stats.demo.ethnicity['PreferNotToAnswer'] / stats.total * 100 | number: 1}}%)
-      </div>
-    </div>
     <div class="ui divider"></div>
     <div class="ui list">
       <div
