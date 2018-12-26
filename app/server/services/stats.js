@@ -12,26 +12,17 @@ function calculateStats(){
     total: 0,
     demo: {
       gender: {
-        Female: 0,
-        Trans: 0,
-        NonBinary: 0,
-        Other: 0
+        M: 0,
+        F: 0,
+        O: 0,
+        N: 0
       },
       schools: {},
-      grade: {
-        'HighSchool': 0,
-        'Freshman': 0,
-        'Sophomore': 0,
-        'Junior': 0,
-        'Senior': 0
-      },
-      ethnicity: {
-        'Asian': 0,
-        'African': 0,
-        'Caucasian': 0, 
-        'Hispanic': 0,
-        'Other': 0,
-        'PreferNotToAnswer': 0
+      year: {
+        '2016': 0,
+        '2017': 0,
+        '2018': 0,
+        '2019': 0,
       }
     },
 
@@ -40,38 +31,47 @@ function calculateStats(){
     submitted: 0,
     admitted: 0,
     confirmed: 0,
+    confirmedMit: 0,
     declined: 0,
 
     confirmedFemale: 0,
-    confirmedTrans: 0,
-    confirmedNonBinary: 0,
+    confirmedMale: 0,
     confirmedOther: 0,
+    confirmedNone: 0,
 
     shirtSizes: {
       'XS': 0,
       'S': 0,
       'M': 0,
       'L': 0,
-      'XL': 0
+      'XL': 0,
+      'XXL': 0,
+      'WXS': 0,
+      'WS': 0,
+      'WM': 0,
+      'WL': 0,
+      'WXL': 0,
+      'WXXL': 0,
+      'None': 0
     },
 
-    vegan: 0,
+    dietaryRestrictions: {},
 
-    vegetarian: 0,
+    hostNeededFri: 0,
+    hostNeededSat: 0,
+    hostNeededUnique: 0,
 
-    glutenfree: 0,
+    hostNeededFemale: 0,
+    hostNeededMale: 0,
+    hostNeededOther: 0,
+    hostNeededNone: 0,
 
-    bus: {
-      'No': 0,
-      'UCSD': 0,
-      'UCI': 0,
-      'CalPolySlo': 0,
-      'CalPolyPomona': 0,
-      'CalTech': 0
-    },
+    reimbursementTotal: 0,
+    reimbursementMissing: 0,
 
-    checkedIn: 0, 
-    adult: 0
+    wantsHardware: 0,
+
+    checkedIn: 0
   };
 
   User
@@ -91,12 +91,6 @@ function calculateStats(){
         // Add to the gender
         newStats.demo.gender[user.profile.gender] += 1;
 
-        // Add to grade
-        newStates.demo.grade[user.profile.grade] += 1;
-
-        // Add to ethnicity
-        newStates.demo.ethnicity[user.profile.ethnicity] += 1;
-
         // Count verified
         newStats.verified += user.verified ? 1 : 0;
 
@@ -109,14 +103,26 @@ function calculateStats(){
         // Count confirmed
         newStats.confirmed += user.status.confirmed ? 1 : 0;
 
-        // Count confirmed by gender
-        newStats.confirmedFemale += user.status.confirmed && user.profile.gender == "Female" ? 1 : 0;
-        newStats.confirmedTrans += user.status.confirmed && user.profile.gender == "Trans" ? 1 : 0;
-        newStats.confirmedNonBinary += user.status.confirmed && user.profile.gender == "NonBinary" ? 1 : 0;
-        newStats.confirmedPreferNotToAnswer += user.status.confirmed && user.profile.gender == "PreferNotToAnswer" ? 1 : 0;
+        // Count confirmed that are mit
+        newStats.confirmedMit += user.status.confirmed && email === "mit.edu" ? 1 : 0;
+
+        newStats.confirmedFemale += user.status.confirmed && user.profile.gender == "F" ? 1 : 0;
+        newStats.confirmedMale += user.status.confirmed && user.profile.gender == "M" ? 1 : 0;
+        newStats.confirmedOther += user.status.confirmed && user.profile.gender == "O" ? 1 : 0;
+        newStats.confirmedNone += user.status.confirmed && user.profile.gender == "N" ? 1 : 0;
 
         // Count declined
         newStats.declined += user.status.declined ? 1 : 0;
+
+        // Count the number of people who need reimbursements
+        newStats.reimbursementTotal += user.confirmation.needsReimbursement ? 1 : 0;
+
+        // Count the number of people who still need to be reimbursed
+        newStats.reimbursementMissing += user.confirmation.needsReimbursement &&
+          !user.status.reimbursementGiven ? 1 : 0;
+
+        // Count the number of people who want hardware
+        newStats.wantsHardware += user.confirmation.wantsHardware ? 1 : 0;
 
         // Count schools
         if (!newStats.demo.schools[email]){
@@ -132,10 +138,10 @@ function calculateStats(){
         newStats.demo.schools[email].confirmed += user.status.confirmed ? 1 : 0;
         newStats.demo.schools[email].declined += user.status.declined ? 1 : 0;
 
-        // Count bus
-        newStats.bus[user.profile.bus] += 1;
-
-        newStates.adult += user.status.adult ? 1 : 0;
+        // Count graduation years
+        if (user.profile.graduationYear){
+          newStats.demo.year[user.profile.graduationYear] += 1;
+        }
 
         // Grab the team name if there is one
         // if (user.teamCode && user.teamCode.length > 0){
@@ -150,16 +156,45 @@ function calculateStats(){
           newStats.shirtSizes[user.confirmation.shirtSize] += 1;
         }
 
+        // Host needed counts
+        newStats.hostNeededFri += user.confirmation.hostNeededFri ? 1 : 0;
+        newStats.hostNeededSat += user.confirmation.hostNeededSat ? 1 : 0;
+        newStats.hostNeededUnique += user.confirmation.hostNeededFri || user.confirmation.hostNeededSat ? 1 : 0;
+
+        newStats.hostNeededFemale
+          += (user.confirmation.hostNeededFri || user.confirmation.hostNeededSat) && user.profile.gender == "F" ? 1 : 0;
+        newStats.hostNeededMale
+          += (user.confirmation.hostNeededFri || user.confirmation.hostNeededSat) && user.profile.gender == "M" ? 1 : 0;
+        newStats.hostNeededOther
+          += (user.confirmation.hostNeededFri || user.confirmation.hostNeededSat) && user.profile.gender == "O" ? 1 : 0;
+        newStats.hostNeededNone
+          += (user.confirmation.hostNeededFri || user.confirmation.hostNeededSat) && user.profile.gender == "N" ? 1 : 0;
+
         // Dietary restrictions
-        newStats.vegan += user.confirmation.vegan ? 1 : 0;
-        newStats.vegetarian += user.confirmation.vegetarian ? 1 : 0;
-        newStats.glutenfree += user.confirmation.glutenfree ? 1 : 0;
+        if (user.confirmation.dietaryRestrictions){
+          user.confirmation.dietaryRestrictions.forEach(function(restriction){
+            if (!newStats.dietaryRestrictions[restriction]){
+              newStats.dietaryRestrictions[restriction] = 0;
+            }
+            newStats.dietaryRestrictions[restriction] += 1;
+          });
+        }
 
         // Count checked in
         newStats.checkedIn += user.status.checkedIn ? 1 : 0;
 
         callback(); // let async know we've finished
       }, function() {
+        // Transform dietary restrictions into a series of objects
+        var restrictions = [];
+        _.keys(newStats.dietaryRestrictions)
+          .forEach(function(key){
+            restrictions.push({
+              name: key,
+              count: newStats.dietaryRestrictions[key],
+            });
+          });
+        newStats.dietaryRestrictions = restrictions;
 
         // Transform schools into an array of objects
         var schools = [];
