@@ -12,17 +12,26 @@ function calculateStats(){
     total: 0,
     demo: {
       gender: {
-        M: 0,
-        F: 0,
-        O: 0,
-        N: 0
+        Female: 0,
+        Trans: 0,
+        NonBinary: 0,
+        Other: 0
       },
       schools: {},
-      year: {
-        '2016': 0,
-        '2017': 0,
-        '2018': 0,
-        '2019': 0,
+      grade: {
+        'HighSchool': 0,
+        'Freshman': 0,
+        'Sophomore': 0,
+        'Junior': 0,
+        'Senior': 0
+      },
+      ethnicity: {
+        'Asian': 0,
+        'African': 0,
+        'Caucasian': 0, 
+        'Hispanic': 0,
+        'Other': 0,
+        'PreferNotToAnswer': 0
       }
     },
 
@@ -31,45 +40,35 @@ function calculateStats(){
     submitted: 0,
     admitted: 0,
     confirmed: 0,
-    confirmedMit: 0,
     declined: 0,
 
     confirmedFemale: 0,
-    confirmedMale: 0,
+    confirmedTrans: 0,
+    confirmedNonBinary: 0,
     confirmedOther: 0,
-    confirmedNone: 0,
 
     shirtSizes: {
       'XS': 0,
       'S': 0,
       'M': 0,
       'L': 0,
-      'XL': 0,
-      'XXL': 0,
-      'WXS': 0,
-      'WS': 0,
-      'WM': 0,
-      'WL': 0,
-      'WXL': 0,
-      'WXXL': 0,
-      'None': 0
+      'XL': 0
     },
 
-    dietaryRestrictions: {},
+    vegan: 0,
 
-    hostNeededFri: 0,
-    hostNeededSat: 0,
-    hostNeededUnique: 0,
+    vegetarian: 0,
 
-    hostNeededFemale: 0,
-    hostNeededMale: 0,
-    hostNeededOther: 0,
-    hostNeededNone: 0,
+    glutenfree: 0,
 
-    reimbursementTotal: 0,
-    reimbursementMissing: 0,
-
-    wantsHardware: 0,
+    bus: {
+      'No': 0,
+      'UCSD': 0,
+      'UCI': 0,
+      'CalPolySlo': 0,
+      'CalPolyPomona': 0,
+      'CalTech': 0
+    },
 
     checkedIn: 0
   };
