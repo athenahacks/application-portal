@@ -200,7 +200,7 @@ angular.module('reg')
       }
 
       function generateSections(user){
-        if (user.status.admitted || user.status.confirmed || user.status.checkedIn || user.status.declined) {
+        if (user.status.confirmed || user.status.checkedIn || user.status.declined) {
           //Basic, Profile, and Confirmation sections
           return [
             {
@@ -310,7 +310,7 @@ angular.module('reg')
             }
           ];
         }
-        if (user.status.completedProfile) {
+        if (user.status.admitted || user.status.completedProfile) {
           return [
             //Basic and Profile sections
             {
