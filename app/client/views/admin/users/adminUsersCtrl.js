@@ -200,113 +200,193 @@ angular.module('reg')
       }
 
       function generateSections(user){
-        return [
-          {
+        if (user.status.admitted || user.status.confirmed || user.status.checkedIn || user.status.declined) {
+          //Basic, Profile, and Confirmation sections
+          return [
+            {
+              name: 'Basic Info',
+              fields: [
+                {
+                  name: 'Created On',
+                  value: formatTime(user.timestamp)
+                },{
+                  name: 'Last Updated',
+                  value: formatTime(user.lastUpdated)
+                },{
+                  name: 'Confirm By',
+                  value: formatTime(user.status.confirmBy) || 'N/A'
+                },{
+                  name: 'Checked In',
+                  value: formatTime(user.status.checkInTime) || 'N/A'
+                },{
+                  name: 'Email',
+                  value: user.email
+                },{
+                  name: 'Team',
+                  value: user.teamCode || 'None'
+                }
+              ]
+            },{
+              name: 'Profile',
+              fields: [
+                {
+                  name: 'First Name',
+                  value: user.profile.fname
+                },{
+                  name: 'Last Name',
+                  value: user.profile.lname
+                },{
+                  name: 'School',
+                  value: user.profile.school
+                },{
+                  name: 'Grade',
+                  value: user.profile.grade
+                },{
+                  name: 'Major',
+                  value: user.profile.major
+                },{
+                  name: 'Gender',
+                  value: user.profile.gender
+                },{ 
+                  name: 'Ethnicity',
+                  value: user.profile.ethnicity
+                },{   
+                  name: 'Attended Hackathons',
+                  value: user.profile.hacks
+                },{    
+                  name: 'Attended AthenaHacks',
+                  value: user.profile.attended
+                },{                    
+                  name: 'Topic',
+                  value: user.profile.topic
+                },{
+                  name: 'Essay',
+                  value: user.profile.essay
+                },{
+                  name: 'Links',
+                  value: user.profile.links
+                },{
+                  name: 'Adult',
+                  value: user.profile.adult
+                }
+  
+              ]
+            },{
+              name: 'Confirmation',
+              fields: [
+                {
+                  name: 'Phone Number',
+                  value: user.confirmation.phoneNumber
+                },{
+                  name: 'Vegetarian',
+                  value: user.confirmation.vegetarian
+                },{
+                  name: 'Vegan',
+                  value: user.confirmation.vegan
+                },{
+                  name: 'GlutenFree',
+                  value: user.confirmation.glutenfree
+                },{
+                  name: 'Shirt Size',
+                  value: user.confirmation.shirtSize
+                },{
+                  name: 'Resume',
+                  value: user.confirmation.resume
+                },{
+                  name: 'Travel',
+                  value: user.confirmation.bus
+                },{
+                  name: 'Emergency Contact',
+                  value: user.confirmation.econtact
+                },{
+                  name: 'Emergency Number',
+                  value: user.confirmation.enumber,
+                  type: 'boolean'
+                },{
+                  name: 'Notes',
+                  value: user.confirmation.notes
+                }
+              ]
+            }
+          ];
+        }
+        if (user.status.completedProfile) {
+          return [
+            //Basic and Profile sections
+            {
             name: 'Basic Info',
-            fields: [
-              {
-                name: 'Created On',
-                value: formatTime(user.timestamp)
-              },{
-                name: 'Last Updated',
-                value: formatTime(user.lastUpdated)
-              },{
-                name: 'Confirm By',
-                value: formatTime(user.status.confirmBy) || 'N/A'
-              },{
-                name: 'Checked In',
-                value: formatTime(user.status.checkInTime) || 'N/A'
-              },{
-                name: 'Email',
-                value: user.email
-              },{
-                name: 'Team',
-                value: user.teamCode || 'None'
-              }
-            ]
-          },{
-            name: 'Profile',
-            fields: [
-              {
-                name: 'First Name',
-                value: user.profile.fname
-              },{
-                name: 'Last Name',
-                value: user.profile.lname
-              },{
-                name: 'School',
-                value: user.profile.school
-              },{
-                name: 'Grade',
-                value: user.profile.grade
-              },{
-                name: 'Major',
-                value: user.profile.major
-              },{
-                name: 'Gender',
-                value: user.profile.gender
-              },{ 
-                name: 'Ethnicity',
-                value: user.profile.ethnicity
-              },{   
-                name: 'Attended Hackathons',
-                value: user.profile.hacks
-              },{    
-                name: 'Attended AthenaHacks',
-                value: user.profile.attended
-              },{                    
-                name: 'Topic',
-                value: user.profile.topic
-              },{
-                name: 'Essay',
-                value: user.profile.essay
-              },{
-                name: 'Links',
-                value: user.profile.links
-              },{
-                name: 'Adult',
-                value: user.profile.adult
-              }
-
-            ]
-          },{
-            name: 'Confirmation',
-            fields: [
-              {
-                name: 'Phone Number',
-                value: user.confirmation.phoneNumber
-              },{
-                name: 'Vegetarian',
-                value: user.confirmation.vegetarian
-              },{
-                name: 'Vegan',
-                value: user.confirmation.vegan
-              },{
-                name: 'GlutenFree',
-                value: user.confirmation.glutenfree
-              },{
-                name: 'Shirt Size',
-                value: user.confirmation.shirtSize
-              },{
-                name: 'Resume',
-                value: user.confirmation.resume
-              },{
-                name: 'Travel',
-                value: user.confirmation.bus
-              },{
-                name: 'Emergency Contact',
-                value: user.confirmation.econtact
-              },{
-                name: 'Emergency Number',
-                value: user.confirmation.enumber,
-                type: 'boolean'
-              },{
-                name: 'Notes',
-                value: user.confirmation.notes
-              }
-            ]
-          }
-        ];
+              fields: [
+                {
+                  name: 'Created On',
+                  value: formatTime(user.timestamp)
+                },{
+                  name: 'Last Updated',
+                  value: formatTime(user.lastUpdated)
+                },{
+                  name: 'Confirm By',
+                  value: formatTime(user.status.confirmBy) || 'N/A'
+                },{
+                  name: 'Checked In',
+                  value: formatTime(user.status.checkInTime) || 'N/A'
+                },{
+                  name: 'Email',
+                  value: user.email
+                },{
+                  name: 'Team',
+                  value: user.teamCode || 'None'
+                }
+              ]
+            },{
+              name: 'Profile',
+              fields: [
+                {
+                  name: 'First Name',
+                  value: user.profile.fname
+                },{
+                  name: 'Last Name',
+                  value: user.profile.lname
+                },{
+                  name: 'School',
+                  value: user.profile.school
+                },{
+                  name: 'Grade',
+                  value: user.profile.grade
+                },{
+                  name: 'Major',
+                  value: user.profile.major
+                },{
+                  name: 'Gender',
+                  value: user.profile.gender
+                },{ 
+                  name: 'Ethnicity',
+                  value: user.profile.ethnicity
+                },{   
+                  name: 'Attended Hackathons',
+                  value: user.profile.hacks
+                },{    
+                  name: 'Attended AthenaHacks',
+                  value: user.profile.attended
+                },{                    
+                  name: 'Topic',
+                  value: user.profile.topic
+                },{
+                  name: 'Essay',
+                  value: user.profile.essay
+                },{
+                  name: 'Links',
+                  value: user.profile.links
+                },{
+                  name: 'Adult',
+                  value: user.profile.adult
+                }
+  
+              ]
+            }
+          ];        
+        }
+        else {
+          return [];
+        }
       }
 
       $scope.selectUser = selectUser;
