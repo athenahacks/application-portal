@@ -92,10 +92,10 @@ function calculateStats(){
         newStats.demo.gender[user.profile.gender] += 1;
 
         // Add to grade
-        newStates.demo.grade[user.profile.grade] += 1;
+        newStats.demo.grade[user.profile.grade] += 1;
 
         // Add to ethnicity
-        newStates.demo.ethnicity[user.profile.ethnicity] += 1;
+        newStats.demo.ethnicity[user.profile.ethnicity] += 1;
 
         // Count verified
         newStats.verified += user.verified ? 1 : 0;
@@ -135,7 +135,7 @@ function calculateStats(){
         // Count bus
         newStats.bus[user.profile.bus] += 1;
 
-        newStates.adult += user.status.adult ? 1 : 0;
+        newStats.adult += user.status.adult ? 1 : 0;
 
         // Grab the team name if there is one
         // if (user.teamCode && user.teamCode.length > 0){
