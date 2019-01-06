@@ -9,8 +9,8 @@ $login-color: $primary;
 $register-color: $tertiary;
 
 $status-unverified-color: rgb(82, 82, 82);
-$status-incomplete-color: #F5F5F5;
-$status-submitted-color: lighten($secondary, 20%);
+$status-incomplete-color: rgb(100, 100, 100);
+$status-submitted-color: $tertiary;
 $status-admitted-color: $primary;
 $status-confirmed-color: $secondary;
 $status-checkedin-color: $secondary;
