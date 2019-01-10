@@ -65,7 +65,7 @@ function calculateStats(){
       'No': 0,
       'UCSD': 0,
       'UCI': 0,
-      'CalPolySlo': 0,
+      'CalPolySLO': 0,
       'CalPolyPomona': 0,
       'CalTech': 0
     },
