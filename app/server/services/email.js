@@ -88,7 +88,7 @@ controller.sendVerificationEmail = function(email, token, callback) {
 
   var options = {
     to: email,
-    subject: "["+HACKATHON_NAME+"] - Verify your email"
+    subject: "Verify your ["+HACKATHON_NAME+"] account"
   };
 
   var locals = {
