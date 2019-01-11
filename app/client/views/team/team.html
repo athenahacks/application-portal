@@ -71,7 +71,7 @@
             ng-repeat="user in teammates"
             class="item">
             {{user.profile.fname || 'Somebody (has not filled out their profile!)'}}
-            {{user.profile.lname}} || ''
+            {{user.profile.lname || ''}}
           </p>
 
           <div
