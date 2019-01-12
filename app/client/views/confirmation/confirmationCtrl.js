@@ -57,15 +57,30 @@ angular.module('reg')
                 }
               ]
             },
+            shirt: {
+              identifier: 'bus',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please choose a bus option!'
+                }
+              ]
+            },
             econtact: {
               identifier: 'econtact',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please enter an emergency contact.'
+                }
+              ]
             },
             enumber: {
               identifier: 'enumber',
               rules: [
                 {
                   type: 'empty',
-                  prompt: 'Please enter a phone number.'
+                  prompt: 'Please enter an emergency phone number.'
                 }
               ]
             },
