@@ -7,6 +7,8 @@
           <img src="assets/images/logo-color.svg">
         </div>
 
+        <div class="title">AthenaHacks 2019</div>
+
         <div class="ui divider"></div>
 
         <div class="ui small error message"
@@ -38,11 +40,11 @@
                         Login
                 </button>
               </div>
+              <div class="field"></div>
             </form>
           </div>
 
           <div class="ui form" ng-show="regIsOpen">
-            <div class="ui divider"></div>
             <div class="field">
               <button id="register"
                       type="submit"
@@ -75,7 +77,7 @@
           </div>
         </div>
 
-        <div class="ui divider"></div>
+        <br />
 
         <div ng-show="loginState === 'login'" class="forgot">
           <a href="#" ng-click="setLoginState('forgot')">

@@ -28,16 +28,29 @@
 
       .button {
         color: white;
+        -webkit-transition-duration: 0.2s; /* Safari */
+        transition-duration: 0.2s;
         &.login {
           background: $login-color;
         }
         &.register {
           background: $register-color
         }
+        &.login:hover {
+          background: #5eadf9;
+        }
+        &.register:hover {
+          background: #ffb28f;
+        }
       }
 
       .forgot {
         text-align: center;
+      }
+
+      .title {
+        text-align: center;
+        color: #878787;
       }
 
     }
