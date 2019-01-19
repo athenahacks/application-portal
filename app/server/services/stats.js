@@ -23,7 +23,8 @@ function calculateStats(){
         'Freshman': 0,
         'Sophomore': 0,
         'Junior': 0,
-        'Senior': 0
+        'Senior': 0,
+        'Grad': 0
       },
       ethnicity: {
         'Asian': 0,
