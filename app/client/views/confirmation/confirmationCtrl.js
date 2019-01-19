@@ -57,7 +57,7 @@ angular.module('reg')
                 }
               ]
             },
-            shirt: {
+            bus: {
               identifier: 'bus',
               rules: [
                 {
