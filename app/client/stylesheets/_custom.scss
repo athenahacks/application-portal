@@ -16,4 +16,7 @@ $tertiary: #ffce9f;
   */
 
 $login-bg: url('../assets/images/watercolor-backgrounda.jpg');
-//url('../assets/images/orange-purple.svg')
+
+@media only screen and (max-width: 768px) {
+$login-bg: url('../assets/images/pb.svg');
+}
