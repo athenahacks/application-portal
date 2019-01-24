@@ -10,13 +10,3 @@
 $primary: #8ec6fc;
 $secondary: #fe9bc0;
 $tertiary: #ffce9f;
-
-/** ASSET URLS
-  * login-bg: image for login splash page
-  */
-
-$login-bg: url('../assets/images/watercolor-backgrounda.jpg');
-
-@media only screen and (max-width: 768px) {
-$login-bg: url('../assets/images/pb.svg');
-}
