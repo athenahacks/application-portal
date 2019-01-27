@@ -65,7 +65,7 @@ angular.module('reg')
           .success(function(data){
             sweetAlert({
               title: "Awesome!",
-              text: "Your application has been saved. <br> <a href=\"bit.ly/AthenaHacks2019\">Join our Facebook Event!</a>",
+              html: "<p>Your application has been saved.</p> <br> <a href=\"bit.ly/AthenaHacks2019\">Join our Facebook Event!</a>",
               type: "success",
               confirmButtonColor: "#fe9bc0"
             }, function(){
