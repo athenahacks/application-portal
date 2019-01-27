@@ -68,7 +68,7 @@ angular.module('reg')
               text: "Your application has been saved.",
               type: "success",
               confirmButtonColor: "#e76482",
-              footer: '<a href="https://bit.ly/AthenaHacks2019">Join our Facebook Event!</a>'
+              footer: "<a href=\"https://bit.ly/AthenaHacks2019\">Join our Facebook Event!</a>"
             }, function(){
               $state.go('app.dashboard');
             });
