@@ -65,9 +65,10 @@ angular.module('reg')
           .success(function(data){
             sweetAlert({
               title: "Awesome!",
-              text: "Your application has been saved. Please join our Facebook event at http://bit.ly/AthenaHacks2019",
+              text: "Your application has been saved.",
               type: "success",
-              confirmButtonColor: "#e76482"
+              confirmButtonColor: "#e76482",
+              footer: '<a href="https://bit.ly/AthenaHacks2019">Join our Facebook Event!</a>'
             }, function(){
               $state.go('app.dashboard');
             });
