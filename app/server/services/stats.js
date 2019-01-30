@@ -72,7 +72,8 @@ function calculateStats(){
     },
 
     checkedIn: 0, 
-    adult: 0
+    adult: 0,
+    firsthack: 0
   };
 
   User
@@ -158,6 +159,10 @@ function calculateStats(){
 
         // Count checked in
         newStats.checkedIn += user.status.checkedIn ? 1 : 0;
+
+        if (user.profile.hacks == 0) {
+          newStats.firsthack += 1;
+        }
 
         callback(); // let async know we've finished
       }, function() {
