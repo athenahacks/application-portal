@@ -210,7 +210,6 @@ UserController.getAll = function (callback) {
     queries.push({ 'email': re });
     queries.push({ 'profile.fname': re });
     queries.push({ 'profile.lname': re });
-    queries.push({ 'teamCode': re });
   }
   return queries;
 }
