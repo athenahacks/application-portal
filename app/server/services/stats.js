@@ -31,6 +31,8 @@ function calculateStats(){
         'African': 0,
         'Caucasian': 0, 
         'Hispanic': 0,
+        'NativeAmerican': 0,
+        'Multiracial': 0,
         'Other': 0,
         'PreferNotToAnswer': 0
       }

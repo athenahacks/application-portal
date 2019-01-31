@@ -54,7 +54,7 @@ var profile = {
   ethnicity: {
     type: String,
     enum : {
-      values: 'Asian African Caucasian Hispanic Other PreferNotToAnswer'.split(' ')
+      values: 'Asian African Caucasian Hispanic NativeAmerican Multiracial Other PreferNotToAnswer'.split(' ')
     }
   },
 
