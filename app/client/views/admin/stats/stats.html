@@ -83,6 +83,10 @@
 
         <div class="ui divider"></div>
         First Hackathon: {{stats.firsthack}} ({{stats.firsthack / stats.total * 100 | number: 1}}%)
+        
+        <div class="ui divider"></div>
+        Minor: {{stats.minor}} ({{stats.minor / stats.total * 100 | number: 1}}%)
+
         <div class="ui divider"></div>
 
         <div class="item">
@@ -105,16 +109,7 @@
         <div class="item">
           <i class="green money icon"></i>
           <div class="content">
-            <strong>
-              Travel
-            </strong>
-            <br>
-            No: {{stats.bus['No']}} <br>
-            UCSD: {{stats.bus['UCSD']}} <br>
-            UCI: {{stats.bus['UCI']}} <br>
-            CalPolySLO: {{stats.bus['CalPolySLO']}} <br>
-            CalPolyPomona: {{stats.bus['CalPolyPomona']}} <br>
-            CalTech: {{stats.bus['CalTech']}} <br>
+            Transportation: ({{stats.transportation / stats.total * 100 | number: 1}}%)
           </div>
         </div>
 

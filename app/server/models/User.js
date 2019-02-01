@@ -92,6 +92,11 @@ var profile = {
     default: false,
   },
 
+  transportation: {
+    type: Boolean,
+    default: false,
+  }
+
 };
 
 // Only after confirmed

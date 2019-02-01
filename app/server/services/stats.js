@@ -73,8 +73,10 @@ function calculateStats(){
       'CalTech': 0
     },
 
+    transportation: 0,
+
     checkedIn: 0, 
-    adult: 0,
+    minor: 0,
     firsthack: 0
   };
 
@@ -139,7 +141,7 @@ function calculateStats(){
         // Count bus
         newStats.bus[user.profile.bus] += 1;
 
-        newStats.adult += user.status.adult ? 1 : 0;
+        newStats.minor += user.status.adult ? 0 : 1;
 
         // Grab the team name if there is one
         // if (user.teamCode && user.teamCode.length > 0){
