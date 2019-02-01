@@ -141,7 +141,10 @@ function calculateStats(){
         // Count bus
         newStats.bus[user.profile.bus] += 1;
 
-        newStats.minor += user.profile.adult ? 0 : 1;
+        //subtract adults from apps to get minor count
+        var adult = 0;
+        adult += user.profile.adult? 1 : 0;
+        newStats.minor = newStats.submitted - adult;
 
         // Grab the team name if there is one
         // if (user.teamCode && user.teamCode.length > 0){
