@@ -76,7 +76,7 @@ function calculateStats(){
     transportation: 0,
 
     checkedIn: 0, 
-    minor: 0,
+    adult: 0,
     firsthack: 0
   };
 
@@ -142,9 +142,7 @@ function calculateStats(){
         newStats.bus[user.profile.bus] += 1;
 
         //subtract adults from apps to get minor count
-        var adult = 0;
-        adult += user.profile.adult? 1 : 0;
-        newStats.minor = newStats.submitted - adult;
+        newStats.adult += user.profile.adult? 1 : 0;
 
         // Grab the team name if there is one
         // if (user.teamCode && user.teamCode.length > 0){

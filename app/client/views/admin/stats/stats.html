@@ -85,7 +85,7 @@
         First Hackathon: {{stats.firsthack}} ({{stats.firsthack / stats.submitted * 100 | number: 1}}%)
         
         <div class="ui divider"></div>
-        Minor: {{stats.minor}} ({{stats.minor / stats.submitted * 100 | number: 1}}%)
+        Minor: {{stats.submitted - stats.adult}} ({{(stats.submitted - stats.adult) / stats.submitted * 100 | number: 1}}%)
 
         <div class="ui divider"></div>
 
