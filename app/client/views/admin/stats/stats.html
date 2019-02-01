@@ -82,10 +82,10 @@
         </div>
 
         <div class="ui divider"></div>
-        First Hackathon: {{stats.firsthack}} ({{stats.firsthack / stats.total * 100 | number: 1}}%)
+        First Hackathon: {{stats.firsthack}} ({{stats.firsthack / stats.submitted * 100 | number: 1}}%)
         
         <div class="ui divider"></div>
-        Minor: {{stats.minor}} ({{stats.minor / stats.total * 100 | number: 1}}%)
+        Minor: {{stats.minor}} ({{stats.minor / stats.submitted * 100 | number: 1}}%)
 
         <div class="ui divider"></div>
 
@@ -109,7 +109,7 @@
         <div class="item">
           <i class="green money icon"></i>
           <div class="content">
-            Transportation: ({{stats.transportation / stats.total * 100 | number: 1}}%)
+            Transportation: {{stats.transportation}} ({{stats.transportation / stats.submitted * 100 | number: 1}}%)
           </div>
         </div>
 
@@ -148,74 +148,74 @@
       <div class="item">
         <i class="female icon"></i>
         <div class="content">
-          <strong>Female</strong>: {{stats.demo.gender['Female']}} ({{stats.demo.gender['Female'] / stats.total * 100 | number:1}}%)
+          <strong>Female</strong>: {{stats.demo.gender['Female']}} ({{stats.demo.gender['Female'] / stats.submitted * 100 | number:1}}%)
         </div>
       </div>
       <div class="item">
         <i class="female icon"></i>
         <div class="content">
-          <strong>Trans</strong>: {{stats.demo.gender['Trans']}} ({{stats.demo.gender['Trans'] / stats.total * 100 | number:1}}%)
+          <strong>Trans</strong>: {{stats.demo.gender['Trans']}} ({{stats.demo.gender['Trans'] / stats.submitted * 100 | number:1}}%)
         </div>
       </div>
       <div class="item">
         <i class="other gender icon"></i>
         <div class="content">
-          <strong>NonBinary</strong>: {{stats.demo.gender['NonBinary']}} ({{stats.demo.gender['NonBinary'] / stats.total * 100 | number:1}}%)
+          <strong>NonBinary</strong>: {{stats.demo.gender['NonBinary']}} ({{stats.demo.gender['NonBinary'] / stats.submitted * 100 | number:1}}%)
         </div>
       </div>
       <div class="item">
         <i class="question icon"></i>
         <div class="content">
-          <strong>Prefer Not To Answer</strong>: {{stats.demo.gender['PreferNotToAnswer']}} ({{stats.demo.gender['PreferNotToAnswer'] / stats.total * 100 | number:1 }}%)
+          <strong>Prefer Not To Answer</strong>: {{stats.demo.gender['PreferNotToAnswer']}} ({{stats.demo.gender['PreferNotToAnswer'] / stats.submitted * 100 | number:1 }}%)
         </div>
       </div>
     </div>
     <div class="ui divider"></div>
     <div class="ui list">
       <div class="item">
-        <strong>High School:</strong> {{stats.demo.grade['HighSchool']}} ({{stats.demo.grade['HighSchool'] / stats.total * 100 | number: 1}}%)
+        <strong>High School:</strong> {{stats.demo.grade['HighSchool']}} ({{stats.demo.grade['HighSchool'] / stats.submitted * 100 | number: 1}}%)
       </div>
       <div class="item">
-        <strong>Freshman:</strong> {{stats.demo.grade['Freshman']}} ({{stats.demo.grade['Freshman'] / stats.total * 100 | number: 1}}%)
+        <strong>Freshman:</strong> {{stats.demo.grade['Freshman']}} ({{stats.demo.grade['Freshman'] / stats.submitted * 100 | number: 1}}%)
       </div>
       <div class="item">
-        <strong>Sophomore:</strong> {{stats.demo.grade['Sophomore']}} ({{stats.demo.grade['Sophomore'] / stats.total * 100 | number: 1}}%)
+        <strong>Sophomore:</strong> {{stats.demo.grade['Sophomore']}} ({{stats.demo.grade['Sophomore'] / stats.submitted * 100 | number: 1}}%)
       </div>
       <div class="item">
-        <strong>Junior:</strong> {{stats.demo.grade['Junior']}} ({{stats.demo.grade['Junior'] / stats.total * 100 | number: 1}}%)
+        <strong>Junior:</strong> {{stats.demo.grade['Junior']}} ({{stats.demo.grade['Junior'] / stats.submitted * 100 | number: 1}}%)
       </div>
       <div class="item">
-        <strong>Senior:</strong> {{stats.demo.grade['Senior']}} ({{stats.demo.grade['Senior'] / stats.total * 100 | number: 1}}%)
+        <strong>Senior:</strong> {{stats.demo.grade['Senior']}} ({{stats.demo.grade['Senior'] / stats.submitted * 100 | number: 1}}%)
       </div>
       <div class="item">
-        <strong>Graduate:</strong> {{stats.demo.grade['Grad']}} ({{stats.demo.grade['Grad'] / stats.total * 100 | number: 1}}%)
+        <strong>Graduate:</strong> {{stats.demo.grade['Grad']}} ({{stats.demo.grade['Grad'] / stats.submitted * 100 | number: 1}}%)
       </div>
     </div>
     <div class="ui divider"></div>
     <div class="ui list">
       <div class="item">
-        <strong>Asian:</strong> {{stats.demo.ethnicity['Asian']}} ({{stats.demo.ethnicity['Asian'] / stats.total * 100 | number: 1}}%)
+        <strong>Asian:</strong> {{stats.demo.ethnicity['Asian']}} ({{stats.demo.ethnicity['Asian'] / stats.submitted * 100 | number: 1}}%)
       </div>
       <div class="item">
-        <strong>Black/African American:</strong> {{stats.demo.ethnicity['African']}} ({{stats.demo.ethnicity['African'] / stats.total * 100 | number: 1}}%)
+        <strong>Black/African American:</strong> {{stats.demo.ethnicity['African']}} ({{stats.demo.ethnicity['African'] / stats.submitted * 100 | number: 1}}%)
       </div>
       <div class="item">
-        <strong>Caucasian:</strong> {{stats.demo.ethnicity['Caucasian']}} ({{stats.demo.ethnicity['Caucasian'] / stats.total * 100 | number: 1}}%)
+        <strong>Caucasian:</strong> {{stats.demo.ethnicity['Caucasian']}} ({{stats.demo.ethnicity['Caucasian'] / stats.submitted * 100 | number: 1}}%)
       </div>
       <div class="item">
-        <strong>Hispanic:</strong> {{stats.demo.ethnicity['Hispanic']}} ({{stats.demo.ethnicity['Hispanic'] / stats.total * 100 | number: 1}}%)
+        <strong>Hispanic:</strong> {{stats.demo.ethnicity['Hispanic']}} ({{stats.demo.ethnicity['Hispanic'] / stats.submitted * 100 | number: 1}}%)
       </div>
       <div class="item">
-        <strong>Native American:</strong> {{stats.demo.ethnicity['NativeAmerican']}} ({{stats.demo.ethnicity['NativeAmerican'] / stats.total * 100 | number: 1}}%)
+        <strong>Native American:</strong> {{stats.demo.ethnicity['NativeAmerican']}} ({{stats.demo.ethnicity['NativeAmerican'] / stats.submitted * 100 | number: 1}}%)
       </div>
       <div class="item">
-        <strong>Multiracial:</strong> {{stats.demo.ethnicity['Multiracial']}} ({{stats.demo.ethnicity['Multiracial'] / stats.total * 100 | number: 1}}%)
+        <strong>Multiracial:</strong> {{stats.demo.ethnicity['Multiracial']}} ({{stats.demo.ethnicity['Multiracial'] / stats.submitted * 100 | number: 1}}%)
       </div>
       <div class="item">
-        <strong>Other:</strong> {{stats.demo.ethnicity['Other']}} ({{stats.demo.ethnicity['Other'] / stats.total * 100 | number: 1}}%)
+        <strong>Other:</strong> {{stats.demo.ethnicity['Other']}} ({{stats.demo.ethnicity['Other'] / stats.submitted * 100 | number: 1}}%)
       </div>
       <div class="item">
-        <strong>Prefer Not To Answer:</strong> {{stats.demo.ethnicity['PreferNotToAnswer']}} ({{stats.demo.ethnicity['PreferNotToAnswer'] / stats.total * 100 | number: 1}}%)
+        <strong>Prefer Not To Answer:</strong> {{stats.demo.ethnicity['PreferNotToAnswer']}} ({{stats.demo.ethnicity['PreferNotToAnswer'] / stats.submitted * 100 | number: 1}}%)
       </div>
     </div>
     <div class="ui divider"></div>
