@@ -141,7 +141,7 @@ function calculateStats(){
         // Count bus
         newStats.bus[user.profile.bus] += 1;
 
-        newStats.minor += user.status.adult ? 0 : 1;
+        newStats.minor += user.profile.adult ? 0 : 1;
 
         // Grab the team name if there is one
         // if (user.teamCode && user.teamCode.length > 0){
