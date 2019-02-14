@@ -31,6 +31,7 @@
             <input type="date"
                    name="birthdate"
                    ng-model="user.confirmation.birthdate" 
+                   placeholder="2019-04-06"
                    required>
           </div>
 
@@ -77,7 +78,7 @@
 
 
           <div class="field">
-            <label> Shirt Size (required) </label>
+            <label> Shirt Size </label>
             <p>
               Yay free clothes! Heads up, these will be women's size shirts, so they tend to run small. 
             </p>
@@ -155,6 +156,7 @@
 
           <br>
           <br>
+          <div class="divided title">MLH Code of Conduct</div>
 
           <div class="field">
             <div class="ui checkbox">
@@ -163,14 +165,14 @@
             </div>
           </div>
 
-          <br><br>
-
           <div class="field">
             <div class="ui checkbox">
               <input type="checkbox" id="mlhauth" ng-model="user.confirmation.mlhauth" required> 
               <label for="mlhauth"> “I authorize you to share certain application/registration information for event administration, ranking, MLH administration, pre and post-event informational e-mails, and occasional messages about hackathons in-line with the <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>. I further I agree to the terms of both the <a href="https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md" target="_blank">MLH Contest Terms and Conditions</a> and the <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>.”</label>
             </div>
           </div>
+
+          <br><br>
 
           <div class="divided title">Additional Notes</div>
 
