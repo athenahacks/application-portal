@@ -26,6 +26,24 @@
           </div>
 
           <div class="field">
+            <label> What is your birthdate?</label>
+            <p>You need to be above 17 years old to attend AthenaHacks.</p>
+            <input type="date"
+                   name="birthdate"
+                   ng-model="user.confirmation.birthdate" 
+                   required>
+          </div>
+
+          <div class="field">
+            <label> What is your graduation year?</label>
+            <input type="number"
+                   name="gradYear"
+                   ng-model="user.confirmation.gradYear" 
+                   required>
+          </div>
+
+
+          <div class="field">
             <label> Dietary Restrictions </label>
 
             <p>
@@ -68,7 +86,6 @@
               ng-model="user.confirmation.shirtSize"
               required>
               <option value="">Shirt Size</option>
-              <option value="XS">X-Small</option>
               <option value="S">Small</option>
               <option value="M">Medium</option>
               <option value="L">Large</option>
@@ -92,7 +109,7 @@
 
           <div class="field">
             <p>
-              We’ll be sending buses free of charge to Irvine, San Diego, San Luis Obispo, and Pasadena with pickups at following schools. <br />
+              We’ll be sending buses free of charge to the Bay Area, Los Angeles, Riverside, Irvine, San Luis Obispo, and Pasadena with pickups at following schools. <br />
               Please sign up for a bus spot and we will put you in contact with the bus coordinator!
             </p>
           </div>
@@ -104,11 +121,12 @@
               ng-model="user.confirmation.bus"
               required>
               <option value="No">No, I would provide my own transportation</option>
-              <option value="UCSD">University of California San Diego (UCSD) </option>
+              <option value="UCB">University of California Berkeley (UCB) </option>
+              <option value="UCLA">University of California Los Angeles (UCLA) </option>
+              <option value="UCR">University of California Riverside (UCR) </option>
               <option value="UCI">University of California Irvine (UCI) </option>
               <option value="CalPolySLO">California Polytechnic State University (Cal Poly SLO) </option>
               <option value="CalPolyPomona">California State Polytechnic University (Cal Poly Pomona) </option>
-              <option value="CalTech">California Institute of Technology (Cal Tech)</option>
             </select>
           </div>
 
@@ -137,6 +155,22 @@
 
           <br>
           <br>
+
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" id="mlh" ng-model="user.confirmation.mlh" required>
+              <label for="mlh">"I have read and agree to the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct"</a></label>
+            </div>
+          </div>
+
+          <br><br>
+
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" id="mlhauth" ng-model="user.confirmation.mlhauth" required> 
+              <label for="mlhauth"> “I authorize you to share certain application/registration information for event administration, ranking, MLH administration, pre and post-event informational e-mails, and occasional messages about hackathons in-line with the <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>. I further I agree to the terms of both the <a href="https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md" target="_blank">MLH Contest Terms and Conditions</a> and the <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>.”</label>
+            </div>
+          </div>
 
           <div class="divided title">Additional Notes</div>
 

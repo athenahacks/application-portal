@@ -51,7 +51,6 @@ function calculateStats(){
     confirmedOther: 0,
 
     shirtSizes: {
-      'XS': 0,
       'S': 0,
       'M': 0,
       'L': 0,
@@ -66,11 +65,11 @@ function calculateStats(){
 
     bus: {
       'No': 0,
-      'UCSD': 0,
+      'UCB': 0,
+      'UCLA': 0,
       'UCI': 0,
       'CalPolySLO': 0,
-      'CalPolyPomona': 0,
-      'CalTech': 0
+      'CalPolyPomona': 0
     },
 
     transportation: 0,

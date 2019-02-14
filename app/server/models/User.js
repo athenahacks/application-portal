@@ -103,6 +103,9 @@ var profile = {
 var confirmation = {
   phoneNumber: String,
 
+  birthdate: String,
+  gradYear: String,
+
   vegetarian: Boolean,
   vegan: Boolean,
   glutenfree: Boolean,
@@ -110,14 +113,14 @@ var confirmation = {
   shirtSize: {
     type: String,
     enum: {
-      values: 'XS S M L XL'.split(' ')
+      values: 'S M L XL'.split(' ')
     }
   },
 
   bus: {
     type: String,
     enum: {
-      values: 'No UCSD UCI CalPolySLO CalPolyPomona CalTech'.split(' ')
+      values: 'No UCB UCLA UCI CalPolySLO CalPolyPomona'.split(' ')
     }
   },
 
@@ -126,7 +129,11 @@ var confirmation = {
   econtact: String,
   enumber: String,
 
-  notes: String,
+  mlh: Boolean,
+  mlhauth: Boolean,
+
+  notes: String
+
 };
 
 var status = {
