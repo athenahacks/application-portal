@@ -67,6 +67,7 @@ function calculateStats(){
       'No': 0,
       'UCB': 0,
       'UCLA': 0,
+      'UCR': 0,
       'UCI': 0,
       'CalPolySLO': 0,
       'CalPolyPomona': 0

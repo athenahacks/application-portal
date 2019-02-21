@@ -229,9 +229,6 @@ angular.module('reg')
                 },{
                   name: 'Email',
                   value: user.email
-                },{
-                  name: 'Team',
-                  value: user.teamCode || 'None'
                 }
               ]
             },{
@@ -289,6 +286,12 @@ angular.module('reg')
                   name: 'Phone Number',
                   value: user.confirmation.phoneNumber
                 },{
+                  name: 'Birthdate',
+                  value: user.confirmation.birthdate
+                },{
+                  name: 'GradYear',
+                  value: user.confirmation.gradYear
+                },{
                   name: 'Vegetarian',
                   value: user.confirmation.vegetarian
                 },{
@@ -312,10 +315,15 @@ angular.module('reg')
                 },{
                   name: 'Emergency Number',
                   value: user.confirmation.enumber,
-                  type: 'boolean'
                 },{
                   name: 'Notes',
                   value: user.confirmation.notes
+                },{
+                  name: 'MLH Code of Conduct',
+                  value: user.confirmation.mlh
+                },{
+                  name: 'MLH Auth',
+                  value: user.confirmation.mlhauth
                 }
               ]
             }
@@ -342,9 +350,6 @@ angular.module('reg')
                 },{
                   name: 'Email',
                   value: user.email
-                },{
-                  name: 'Team',
-                  value: user.teamCode || 'None'
                 }
               ]
             },{
@@ -389,6 +394,9 @@ angular.module('reg')
                 },{
                   name: 'Adult',
                   value: user.profile.adult
+                },{
+                  name: 'Transportation',
+                  value: user.profile.transportation
                 }
   
               ]

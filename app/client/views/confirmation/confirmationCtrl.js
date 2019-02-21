@@ -39,6 +39,24 @@ angular.module('reg')
         // Semantic-UI form validation
         $('.ui.form').form({
           fields: {
+            birthdate: {
+              identifier: 'birthdate',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please give us a birthdate!'
+                }
+              ]
+            },
+            gradYear: {
+              identifier: 'gradYear',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please give us a graduation year!'
+                }
+              ]
+            },
             shirt: {
               identifier: 'shirt',
               rules: [
@@ -84,6 +102,24 @@ angular.module('reg')
                 }
               ]
             },
+            mlh: {
+              identifier: 'mlh',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please click the checkbox.'
+                }
+              ]
+            },
+            mlhauth: {
+              identifier: 'mlhauth',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please click the checkbox.'
+                }
+              ]
+            }
           }
         });
       }
