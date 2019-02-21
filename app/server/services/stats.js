@@ -140,6 +140,9 @@ function calculateStats(){
         // Count bus
         newStats.bus[user.profile.bus] += 1;
 
+        //Count transportation
+        newStats.transportation += user.profile.transportation? 1 : 0;
+
         //subtract adults from apps to get minor count
         newStats.adult += user.profile.adult? 1 : 0;
 

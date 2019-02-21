@@ -276,6 +276,9 @@ angular.module('reg')
                 },{
                   name: 'Adult',
                   value: user.profile.adult
+                },{
+                  name: 'Transportation',
+                  value: user.profile.transportation
                 }
   
               ]
