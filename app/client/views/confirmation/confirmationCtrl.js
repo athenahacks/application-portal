@@ -106,7 +106,7 @@ angular.module('reg')
               identifier: 'mlh',
               rules: [
                 {
-                  type: 'empty',
+                  type: 'checked',
                   prompt: 'Please click the checkbox.'
                 }
               ]
@@ -115,7 +115,7 @@ angular.module('reg')
               identifier: 'mlhauth',
               rules: [
                 {
-                  type: 'empty',
+                  type: 'checked',
                   prompt: 'Please click the checkbox.'
                 }
               ]
