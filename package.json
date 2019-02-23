@@ -7,7 +7,7 @@
     "async": "^1.4.2",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.8.4",
-    "bower": "^1.8.0",
+    "bower": "^1.8.8",
     "dotenv": "^1.2.0",
     "email-templates": "^2.0.1",
     "express": "^4.9.8",
@@ -22,8 +22,8 @@
     "handlebars": "^4.0.11",
     "jsonwebtoken": "5.0.4",
     "method-override": "^2.3.5",
-    "moment": "^2.10.3",
-    "mongoose": "^4.1.2",
+    "moment": "^2.24.0",
+    "mongoose": "^4.13.18",
     "morgan": "^1.6.1",
     "nodemailer": "^1.4.0",
     "nodemailer-smtp-transport": "^1.0.3",
@@ -50,7 +50,7 @@
     "gulp-sass": "^2.0.1",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.2.0",
-    "nodemon": "^1.2.1"
+    "nodemon": "^1.18.10"
   },
   "engines": {
     "node": "7.4.0"
