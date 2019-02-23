@@ -92,7 +92,7 @@ function calculateStats(){
       async.each(users, function(user, callback){
 
         // Grab the email extension
-        var email = user.email.split('@')[1];
+        var email = user.school;
 
         // Add to the gender
         newStats.demo.gender[user.profile.gender] += 1;
