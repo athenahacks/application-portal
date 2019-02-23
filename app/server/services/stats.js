@@ -94,13 +94,6 @@ function calculateStats(){
         // Grab the email extension
         var email = user.email.split('@')[1];
 
-        if (user.profile.school) {
-          email = user.profile.school; //if filled out profile then 
-        }
-        else {
-          email = "Not filled";
-        }
-
         // Add to the gender
         newStats.demo.gender[user.profile.gender] += 1;
 
