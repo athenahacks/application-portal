@@ -121,7 +121,7 @@
         "state": "California"
     },
     "csupomona.edu": {
-        "school": "California State Polytechnic University-Pomona",
+        "school": "California State Polytechnic University,Pomona",
         "state": "California"
     },
     "trincoll.edu": {
@@ -775,6 +775,30 @@
     "fiu.edu": {
         "school": "Florida International University",
         "state": "Florida"
+    },
+    "cpp.edu": {
+        "school": "California State Polytechnic University,Pomona",
+        "state": "California"
+    },
+    "student.csulb.edu": {
+        "school": "California State University, Long Beach",
+        "state": "California"
+    },
+    "lion.lmu.edu": {
+        "school": "Loyola Marymount University",
+        "state": "California"
+    },
+    "student.smc.edu": {
+        "school": "Santa Monica Community College",
+        "state": "California"
+    },
+    "sjsu.edu": {
+        "school": "San Jose State University",
+        "state": "California"
+    },
+    "oxy.edu": {
+        "school": "Occidental College",
+        "state": "California"
     },
     "usc.edu": {
         "school": "University of Southern California",
