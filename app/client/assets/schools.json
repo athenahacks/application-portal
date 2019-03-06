@@ -803,5 +803,9 @@
     "usc.edu": {
         "school": "University of Southern California",
         "state": "California"
+    },
+    "ucmerced.edu": {
+        "school": "University of California-Merced",
+        "state": "California"
     }
 }
