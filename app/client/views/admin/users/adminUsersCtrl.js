@@ -289,6 +289,9 @@ angular.module('reg')
                   name: 'Birthdate',
                   value: user.confirmation.birthdate
                 },{
+                  name: 'Adult',
+                  value: user.confirmation.adult
+                },{
                   name: 'GradYear',
                   value: user.confirmation.gradYear
                 },{
@@ -307,8 +310,11 @@ angular.module('reg')
                   name: 'Resume',
                   value: user.confirmation.resume
                 },{
-                  name: 'Travel',
+                  name: 'Bus',
                   value: user.confirmation.bus
+                },{
+                  name: 'Lyft',
+                  value: user.confirmation.lyft
                 },{
                   name: 'Emergency Contact',
                   value: user.confirmation.econtact
