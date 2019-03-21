@@ -120,7 +120,7 @@ var confirmation = {
   bus: {
     type: String,
     enum: {
-      values: 'No UCB UCLA UCI CalPolySLO CalPolyPomona'.split(' ')
+      values: 'No UCR UCLA UCI CalPolySLO'.split(' ')
     }
   },
 
@@ -132,7 +132,9 @@ var confirmation = {
   mlh: Boolean,
   mlhauth: Boolean,
 
-  notes: String
+  notes: String,
+  adult: Boolean,
+  lyft: Boolean
 
 };
 

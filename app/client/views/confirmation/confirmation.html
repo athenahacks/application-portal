@@ -27,12 +27,24 @@
 
           <div class="field">
             <label> What is your birthdate?</label>
-            <p>You need to be above 17 years old to attend AthenaHacks.</p>
             <input type="date"
                    name="birthdate"
                    ng-model="user.confirmation.birthdate" 
                    placeholder="2019-04-06"
                    required>
+          </div>
+
+          <div class="field">
+              <label>
+                Will you be 18 or older by April 6th, 2019?
+              </label>
+              <p>
+                You need to be at least 18 years old to attend AthenaHacks if you are not a current USC student.
+              </p>
+              <div class="ui checkbox">
+                <input type="checkbox" id="adult" ng-model="user.confirmation.adult">
+                <label for="adult">Yes, I will be 18 or older.</label>
+              </div>
           </div>
 
           <div class="field">
@@ -110,7 +122,7 @@
 
           <div class="field">
             <p>
-              We’ll be sending buses free of charge to the Bay Area, Los Angeles, Riverside, Irvine, San Luis Obispo, and Pasadena with pickups at following schools. <br />
+              We’ll be sending buses free of charge to Los Angeles, Riverside, Irvine, and San Luis Obispo with pickups at following schools. <br />
               Please sign up for a bus spot and we will put you in contact with the bus coordinator!
             </p>
           </div>
@@ -123,13 +135,20 @@
               required>
               <option value="">Bus Options</option>
               <option value="No">No, I would provide my own transportation</option>
-              <option value="UCB">University of California Berkeley (UCB) </option>
               <option value="UCLA">University of California Los Angeles (UCLA) </option>
               <option value="UCR">University of California Riverside (UCR) </option>
               <option value="UCI">University of California Irvine (UCI) </option>
               <option value="CalPolySLO">California Polytechnic State University (Cal Poly SLO) </option>
-              <option value="CalPolyPomona">California State Polytechnic University (Cal Poly Pomona) </option>
             </select>
+          </div>
+
+          <div class="field">
+            <label> If you are in the Los Angeles area, would you need Lyft Code to come to USC? </label>
+            <p>We also encourage you to carpool with your friends and share the Lyft ride</p>
+            <div class="ui checkbox">
+              <input type="checkbox" id="mlh" ng-model="user.confirmation.lyft" required>
+              <label for="lyft">Yes, I would need Lyft Code</label>
+            </div>
           </div>
 
           <br>
