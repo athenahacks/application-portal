@@ -65,13 +65,13 @@ function calculateStats(){
 
     bus: {
       'No': 0,
-      'UCB': 0,
       'UCLA': 0,
       'UCR': 0,
       'UCI': 0,
-      'CalPolySLO': 0,
-      'CalPolyPomona': 0
+      'CalPolySLO': 0
     },
+
+    lyft: 0,
 
     transportation: 0,
 
@@ -145,9 +145,6 @@ function calculateStats(){
         newStats.demo.schools[email].confirmed += user.status.confirmed ? 1 : 0;
         newStats.demo.schools[email].declined += user.status.declined ? 1 : 0;
 
-        // Count bus
-        newStats.bus[user.profile.bus] += 1;
-
         //Count transportation
         newStats.transportation += user.profile.transportation? 1 : 0;
 
@@ -161,6 +158,12 @@ function calculateStats(){
         //   }
         //   newStats.teams[user.teamCode].push(user.profile.name);
         // }
+
+        // Count bus
+        newStats.bus[user.confirmation.bus] += 1;
+
+        //Count Lyft
+        newStats.lyft += user.confirmation.lyft ? 1 : 0;
 
         // Count shirt sizes
         if (user.confirmation.shirtSize in newStats.shirtSizes){
