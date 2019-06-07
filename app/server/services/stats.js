@@ -211,7 +211,7 @@ function calculateStats(){
 
 
         //to delete
-        if (user.status === "checkedIn") {
+        if (user.status.checkedIn) {
           if (user.profile.grade === "Grad") {
             newStats.checkedInGrad ++;
           }
