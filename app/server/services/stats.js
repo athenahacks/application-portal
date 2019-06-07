@@ -77,7 +77,8 @@ function calculateStats(){
 
     checkedIn: 0, 
     adult: 0,
-    firsthack: 0
+    firsthack: 0,
+    checkedInGrad: 0
   };
 
   User
@@ -207,6 +208,15 @@ function calculateStats(){
         //     });
         //   });
         // newStats.teams = teams;
+
+
+        //to delete
+        if (user.status === "checkedIn") {
+          if (user.profile.grade === "Grad") {
+            newStats.checkedInGrad ++;
+          }
+        }
+
 
         console.log('Stats updated!');
         newStats.lastUpdated = new Date();
