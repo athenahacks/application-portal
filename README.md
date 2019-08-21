@@ -1,5 +1,6 @@
-# Quill
+# Quill - AthenaHacks
 Registration, for hackers!
+Forked from https://github.com/techx/quill
 
 Quill is a registration system designed especially for hackathons. For hackers, it’s a clean and streamlined interface to submit registration and confirmation information. For hackathon organizers, it’s an easy way to manage applications, view registration stats, and more!
 
@@ -87,7 +88,7 @@ Getting a local instance of Quill up and running takes less than 5 minutes! Star
 
 ```
 mkdir db
-mongod --dbpath db --bind_ip 127.0.0.1 --nohttpinterface
+mongod --dbpath db --bind_ip 127.0.0.1 
 ```
 
 Install the necessary dependencies:
