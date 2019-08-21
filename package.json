@@ -43,7 +43,7 @@
     "postinstall": "bower install && gulp build"
   },
   "devDependencies": {
-    "gulp": "^4.0.2",
+    "gulp": "^3.9.1",
     "gulp-browserify": "^0.5.1",
     "gulp-concat": "^2.6.0",
     "gulp-ng-annotate": "^1.0.0",
