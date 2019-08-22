@@ -14,10 +14,10 @@
     "express": "^4.17.1",
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
-    "gulp-ng-annotate": "^1.1.0",
+    "gulp-ng-annotate": "^2.1.0",
     "gulp-nodemon": "^2.2.1",
     "gulp-sourcemaps": "^1.12.0",
-    "gulp-uglify": "^1.5.4",
+    "gulp-uglify": "^3.0.2",
     "handlebars": "^4.1.2",
     "jsonwebtoken": "5.0.4",
     "method-override": "^2.3.5",
@@ -45,11 +45,11 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.0",
-    "gulp-ng-annotate": "^1.0.0",
+    "gulp-ng-annotate": "^2.1.0",
     "gulp-nodemon": "^2.0.3",
-    "gulp-sass": "^3.2.1",
+    "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^1.5.2",
-    "gulp-uglify": "^1.2.0",
+    "gulp-uglify": "^3.0.2",
     "nodemon": "^1.19.1"
   },
   "engines": {
