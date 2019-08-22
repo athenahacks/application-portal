@@ -2,7 +2,8 @@ require('dotenv').load();
 var mongoose        = require('mongoose');
 var database        = process.env.DATABASE || "mongodb://localhost:27017";
 var jwt             = require('jsonwebtoken');
-mongoose.connect(database);
+
+mongoose.connect(database, {useMongoClient: true});
 
 var UserController = require('../app/server/controllers/UserController');
 
