@@ -1,5 +1,5 @@
 #application {
-  color: white;
+  color: $font-color;
 
   .page-header {
     background: url(../assets/images/flower.png);
@@ -9,16 +9,16 @@
   }
 
   input, textarea {
-    background: rgba(250, 230, 230, 0.16);
-    color: white;
+    background: $input-background-color;
+    color: $font-color;
   }
   input:focus, textarea:focus, select:focus {
     border: 1px solid $tertiary;
-    color: white;
+    color: $font-color;
   }
 
   input::selection, textarea::selection, select::selection {
-    color: white;
+    color: $font-color;
   }
 
   input::placeholder, textarea::placeholder, select::placeholder {
@@ -30,7 +30,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    color: white;
+    color: $font-color;
   }
 
   label {
@@ -40,10 +40,10 @@
   .results {
     background: $primary;
     .title {
-      color: white;
+      color: $font-color;
     }
     .result:hover {
-      background: rgba(250, 230, 230, 0.16);
+      background: $input-background-color;
     }
   }
 
@@ -54,7 +54,7 @@
   }
   .sub {
     background-color: #F0ADAE;
-    color: white;
+    color: $font-color;
   }
   .sub:hover {
     background-color: rgb(236, 131, 133);
