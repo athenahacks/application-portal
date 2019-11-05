@@ -1,14 +1,62 @@
 #application {
+  color: white;
+
+  .page-header {
+    background: url(../assets/images/flower.png);
+    background-size: 2em;
+    background-repeat: no-repeat;
+    background-position: 75%;
+  }
+
+  input, textarea {
+    background: rgba(250, 230, 230, 0.16);
+    color: white;
+  }
+  input:focus, textarea:focus, select:focus {
+    border: 1px solid $tertiary;
+    color: white;
+  }
+
+  input::selection, textarea::selection, select::selection {
+    color: white;
+  }
+
+  input::placeholder, textarea::placeholder, select::placeholder {
+    color: rgb(211, 211, 211);
+  }
+
+  select {
+    background: url(../assets/images/dropdown.png) 99% / 5% no-repeat rgba(250, 230, 230, 0.16);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: white;
+  }
+
+  label {
+    color: $secondary;
+  }
+
+  .results {
+    background: $primary;
+    .title {
+      color: white;
+    }
+    .result:hover {
+      background: rgba(250, 230, 230, 0.16);
+    }
+  }
+
   #school .title {
     text-align: left;
     text-transform: none;
     letter-spacing: 0;
   }
   .sub {
-    background-color: #fac390;
+    background-color: #F0ADAE;
     color: white;
   }
   .sub:hover {
-    background-color: #fdb877;
+    background-color: rgb(236, 131, 133);
   }
 }

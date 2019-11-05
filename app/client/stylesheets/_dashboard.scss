@@ -1,6 +1,19 @@
 #dashboard {
+  .page-header {
+    background: url(../assets/images/flower.png);
+    background-size: 2em;
+    background-repeat: no-repeat;
+    background-position: 75%;
+  }
+
+  strong {
+    color: $secondary;
+  }
+
   .status {
     text-align: center;
+    background: rgba(250, 230, 230, 0.16);
+    color: white;
     p {
       text-align: left;
     }

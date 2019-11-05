@@ -19,7 +19,7 @@ $status-declined-color: $tertiary;
 $status-rejected-color: red; // Not used
 
 // Sidebar variables
-$sidebar-color: $primary;
+$sidebar-color: rgba(248, 159, 159, 0.603); //rgb(235, 112, 112)
 $sidebar-width: 265px;
 $sidebar-transition-time: .5s;
 $sidebar-tab-size: 55px;
@@ -107,6 +107,18 @@ input {
     }
     &:focus {
       background: $secondary;
+    }
+  }
+  &.tertiary {
+    background: $tertiary;
+    &:hover {
+      background: lighten($tertiary, 3%);
+    }
+    &:active {
+      background: darken($tertiary, 3%);
+    }
+    &:focus {
+      background: $tertiary;
     }
   }
 }
