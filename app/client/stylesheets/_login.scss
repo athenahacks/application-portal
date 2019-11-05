@@ -2,7 +2,7 @@
   height: 100%;
   width: 100%;
   background-color: $login-bg-color;
-  background: url('../assets/images/watercolor-backgrounda.jpg'); 
+  background: url('../assets/images/sakura.png'); 
   background-size: cover;
 
   > .container {
@@ -37,10 +37,10 @@
           background: $register-color
         }
         &.login:hover {
-          background: #5eadf9;
+          background: rgb(99, 99, 139);
         }
         &.register:hover {
-          background: #ffb28f;
+          background: rgb(236, 131, 133);
         }
       }
 
@@ -61,6 +61,6 @@
 //background for mobile
 @media only screen and (max-width: 768px) {
   #login {
-    background: url('../assets/images/pb.jpg');
+    background: url('../assets/images/moon.png');
   }
 }
