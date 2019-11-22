@@ -160,12 +160,28 @@ angular.module('reg')
                   prompt: 'You must be an adult.'
                 }
               ]
+            },
+            mlh: {
+              identifier: 'mlh',
+              rules: [
+                {
+                  type: 'checked',
+                  prompt: 'Please click the checkbox.'
+                }
+              ]
+            },
+            mlhauth: {
+              identifier: 'mlhauth',
+              rules: [
+                {
+                  type: 'checked',
+                  prompt: 'Please click the checkbox.'
+                }
+              ]
             }
           }
         });
       }
-
-
 
       $scope.submitForm = function(){
         if ($('.ui.form').form('is valid')){

@@ -101,24 +101,24 @@ angular.module('reg')
                   prompt: 'Please enter an emergency phone number.'
                 }
               ]
-            },
-            mlh: {
-              identifier: 'mlh',
-              rules: [
-                {
-                  type: 'checked',
-                  prompt: 'Please click the checkbox.'
-                }
-              ]
-            },
-            mlhauth: {
-              identifier: 'mlhauth',
-              rules: [
-                {
-                  type: 'checked',
-                  prompt: 'Please click the checkbox.'
-                }
-              ]
+            // },
+            // mlh: {
+            //   identifier: 'mlh',
+            //   rules: [
+            //     {
+            //       type: 'checked',
+            //       prompt: 'Please click the checkbox.'
+            //     }
+            //   ]
+            // },
+            // mlhauth: {
+            //   identifier: 'mlhauth',
+            //   rules: [
+            //     {
+            //       type: 'checked',
+            //       prompt: 'Please click the checkbox.'
+            //     }
+            //   ]
             }
           }
         });
