@@ -101,7 +101,7 @@
       <div class="ui long user modal">
         <i class="close icon"></i>
         <div class="header">
-          {{selectedUser.profile.fname ? selectedUser.profile.fname: selectedUser.email}}
+          {{selectedUser.profile.name ? selectedUser.profile.name: selectedUser.email}}
           <span
             ng-show="selectedUser.admin">
             (Admin)
@@ -167,7 +167,7 @@
             ng-class="rowClass(user)">
             <td>
               <strong>
-                {{user.profile.fname}} {{user.profile.lname}}
+                {{user.profile.name}}
                 &nbsp;
 
               </strong>

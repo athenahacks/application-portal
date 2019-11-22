@@ -81,6 +81,10 @@ angular.module('reg')
         return !$scope.user.profile.adult;
       }
 
+      function wantsSponsorInfo() {
+        return !$scope.user.profile.sponsors;
+      }
+
       function minorsAreAllowed() {
         return Settings.data.allowMinors;
       }
@@ -153,7 +157,7 @@ angular.module('reg')
               rules: [
                 {
                   type: 'allowMinors',
-                  prompt: 'You must be an adult, or an MIT student.'
+                  prompt: 'You must be an adult.'
                 }
               ]
             }

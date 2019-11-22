@@ -13,17 +13,10 @@
         <fieldset ng-disabled="regIsClosed">
 
         <div class="field">
-          <label> First Name </label>
+          <label> Full Name </label>
           <input type="text"
-                  name="fname"
-                  ng-model="user.profile.fname">
-        </div>
-
-        <div class="field">
-          <label> Last Name </label>
-          <input type="text"
-                  name="lname"
-                  ng-model="user.profile.lname">
+                  name="name"
+                  ng-model="user.profile.name">
         </div>
         
         <div class="field">
@@ -175,6 +168,19 @@
           <div class="ui checkbox">
             <input type="checkbox" id="adult" ng-model="user.profile.adult">
             <label for="adult">Yes, I will be 18 or older.</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>
+            Would you like information, tips, and offers about AthenaHacks and other sponsor related products and services?
+          </label>
+          <p>
+            If so, we will share this information with you!
+          </p>
+          <div class="ui checkbox">
+            <input type="checkbox" id="sponsors" ng-model="user.profile.sponsors">
+            <label for="sponsors">Yes, I would like information, tips, and offers about AthenaHacks and other sponsor related products and services.</label>
           </div>
         </div>
 

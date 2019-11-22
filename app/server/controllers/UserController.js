@@ -208,8 +208,7 @@ UserController.getAll = function (callback) {
   if (searchText.length > 0) {
     const re = new RegExp(searchText, 'i');
     queries.push({ 'email': re });
-    queries.push({ 'profile.fname': re });
-    queries.push({ 'profile.lname': re });
+    queries.push({ 'profile.name': re });
   }
   return queries;
 }

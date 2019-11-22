@@ -75,7 +75,7 @@ angular.module('reg')
         if (!user.status.checkedIn){
           swal({
             title: "Whoa, wait a minute!",
-            text: "You are about to check in " + user.profile.fname + " " + user.profile.lname + "!",
+            text: "You are about to check in " + user.profile.name + "!",
             type: "warning",
             showCancelButton: true,
             confirmButtonColor: "#DD6B55",
@@ -87,7 +87,7 @@ angular.module('reg')
                 .checkIn(user._id)
                 .success(function(user){
                   $scope.users[index] = user;
-                  swal("Accepted", user.profile.fname + " " + user.profile.lname + ' has been checked in.', "success");
+                  swal("Accepted", user.profile.name + ' has been checked in.', "success");
                 });
             }
           );
@@ -96,7 +96,7 @@ angular.module('reg')
             .checkOut(user._id)
             .success(function(user){
               $scope.users[index] = user;
-              swal("Accepted", user.profile.fname + " " + user.profile.lname + ' has been checked out.', "success");
+              swal("Accepted", user.profile.name + ' has been checked out.', "success");
             });
         }
       };
@@ -106,7 +106,7 @@ angular.module('reg')
 
         swal({
           title: "Whoa, wait a minute!",
-          text: "You are about to accept " + user.profile.fname + " " + user.profile.lname + "!",
+          text: "You are about to accept " + user.profile.name + "!",
           type: "warning",
           showCancelButton: true,
           confirmButtonColor: "#DD6B55",
@@ -129,7 +129,7 @@ angular.module('reg')
                   .admitUser(user._id)
                   .success(function(user){
                     $scope.users[index] = user;
-                    swal("Accepted", user.profile.fname + " " + user.profile.lname + ' has been admitted.', "success");
+                    swal("Accepted", user.profile.name + ' has been admitted.', "success");
                   });
 
               });
@@ -144,7 +144,7 @@ angular.module('reg')
         if (!user.admin){
           swal({
             title: "Whoa, wait a minute!",
-            text: "You are about make " + user.profile.fname + " " + user.profile.lname + " an admin!",
+            text: "You are about make " + user.profile.name + " an admin!",
             type: "warning",
             showCancelButton: true,
             confirmButtonColor: "#DD6B55",
@@ -156,14 +156,14 @@ angular.module('reg')
                 .makeAdmin(user._id)
                 .success(function(user){
                   $scope.users[index] = user;
-                  swal("Made", user.profile.fname + " " + user.profile.lname + ' an admin.', "success");
+                  swal("Made", user.profile.name + ' an admin.', "success");
                 });
             }
           );
         } else {
           swal({
             title: "Whoa, wait a minute!",
-            text: "You are about remove " + user.profile.fname + " " + user.profile.lname + " as admin!",
+            text: "You are about remove " + user.profile.name + " as admin!",
             type: "warning",
             showCancelButton: true,
             confirmButtonColor: "#DD6B55",
@@ -175,7 +175,7 @@ angular.module('reg')
                 .removeAdmin(user._id)
                 .success(function(user){
                   $scope.users[index] = user;
-                  swal("Removed", user.profile.fname + " " + user.profile.lname + ' an admin.', "success");
+                  swal("Removed", user.profile.name + ' an admin.', "success");
                 });
             }
           );
@@ -235,11 +235,8 @@ angular.module('reg')
               name: 'Profile',
               fields: [
                 {
-                  name: 'First Name',
-                  value: user.profile.fname
-                },{
-                  name: 'Last Name',
-                  value: user.profile.lname
+                  name: 'Name',
+                  value: user.profile.name
                 },{
                   name: 'School',
                   value: user.profile.school
@@ -273,6 +270,9 @@ angular.module('reg')
                 },{
                   name: 'Adult',
                   value: user.profile.adult
+                },{
+                  name: 'Sponsors',
+                  value: user.profile.sponsors
                 },{
                   name: 'Transportation',
                   value: user.profile.transportation
@@ -362,11 +362,8 @@ angular.module('reg')
               name: 'Profile',
               fields: [
                 {
-                  name: 'First Name',
-                  value: user.profile.fname
-                },{
-                  name: 'Last Name',
-                  value: user.profile.lname
+                  name: 'Name',
+                  value: user.profile.name
                 },{
                   name: 'School',
                   value: user.profile.school
