@@ -13,17 +13,10 @@
         <fieldset ng-disabled="regIsClosed">
 
         <div class="field">
-          <label> First Name </label>
+          <label> Full Name </label>
           <input type="text"
-                  name="fname"
-                  ng-model="user.profile.fname">
-        </div>
-
-        <div class="field">
-          <label> Last Name </label>
-          <input type="text"
-                  name="lname"
-                  ng-model="user.profile.lname">
+                  name="name"
+                  ng-model="user.profile.name">
         </div>
         
         <div class="field">
@@ -103,7 +96,7 @@
 
         <div class="field">
           <label>Transportation</label>
-          <p>We will send out buses to schools based on interest</p>       
+          <p>We will send out buses to schools based on interest. Unfortunately, we will not be able to provide mileage reimbursement this year. </p>       
           <div class="ui checkbox">
             <input type="checkbox" id="transportation" ng-model="user.profile.transportation">
             <label for="transportation">I will require transportation assistance</label>
@@ -175,6 +168,37 @@
           <div class="ui checkbox">
             <input type="checkbox" id="adult" ng-model="user.profile.adult">
             <label for="adult">Yes, I will be 18 or older.</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>
+            Would you like information, tips, and offers about AthenaHacks and other sponsor related products and services?
+          </label>
+          <p>
+            If so, we will share this information with you!
+          </p>
+          <div class="ui checkbox">
+            <input type="checkbox" id="sponsors" ng-model="user.profile.sponsors">
+            <label for="sponsors">Yes, I would like information, tips, and offers about AthenaHacks and other sponsor related products and services.</label>
+          </div>
+        </div>
+
+        <br>
+        <br>
+        <div class="divided title">MLH Code of Conduct</div>
+
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" id="mlh" ng-model="user.profile.mlh" required>
+            <label for="mlh">I have read and agree to the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct.</a></label>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" id="mlhauth" ng-model="user.profile.mlhauth" required> 
+            <label for="mlhauth"> “I authorize you to share certain application/registration information for event administration, ranking, MLH administration, pre and post-event informational e-mails, and occasional messages about hackathons in-line with the <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>. I further I agree to the terms of both the <a href="https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md" target="_blank">MLH Contest Terms and Conditions</a> and the <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>.”</label>
           </div>
         </div>
 

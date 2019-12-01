@@ -17,7 +17,7 @@ angular.module('reg')
 
       _setupForm();
 
-      $scope.fileName = user._id + "_" + user.profile.fname + "_" + user.profile.lname;
+      $scope.fileName = user._id + "_" + user.profile.name;
 
       // -------------------------------
 
@@ -101,24 +101,24 @@ angular.module('reg')
                   prompt: 'Please enter an emergency phone number.'
                 }
               ]
-            },
-            mlh: {
-              identifier: 'mlh',
-              rules: [
-                {
-                  type: 'checked',
-                  prompt: 'Please click the checkbox.'
-                }
-              ]
-            },
-            mlhauth: {
-              identifier: 'mlhauth',
-              rules: [
-                {
-                  type: 'checked',
-                  prompt: 'Please click the checkbox.'
-                }
-              ]
+            // },
+            // mlh: {
+            //   identifier: 'mlh',
+            //   rules: [
+            //     {
+            //       type: 'checked',
+            //       prompt: 'Please click the checkbox.'
+            //     }
+            //   ]
+            // },
+            // mlhauth: {
+            //   identifier: 'mlhauth',
+            //   rules: [
+            //     {
+            //       type: 'checked',
+            //       prompt: 'Please click the checkbox.'
+            //     }
+            //   ]
             }
           }
         });

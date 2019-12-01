@@ -7,13 +7,7 @@ var mongoose   = require('mongoose'),
 var profile = {
 
   // Basic info
-  fname: {
-    type: String,
-    min: 1,
-    max: 100,
-  },
-
-  lname: {
+  name: {
     type: String,
     min: 1,
     max: 100,
@@ -92,6 +86,21 @@ var profile = {
     default: false,
   },
 
+  sponsors: {
+    type: Boolean,
+    default: false,
+  },
+
+  mlh: {
+    type: Boolean,
+    default: false,
+  },
+
+  mlhauth: {
+    type: Boolean,
+    default: false,
+  },
+
   transportation: {
     type: Boolean,
     default: false,
@@ -128,9 +137,6 @@ var confirmation = {
 
   econtact: String,
   enumber: String,
-
-  mlh: Boolean,
-  mlhauth: Boolean,
 
   notes: String,
   adult: Boolean,
