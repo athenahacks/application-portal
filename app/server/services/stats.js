@@ -15,7 +15,8 @@ function calculateStats(){
         Female: 0,
         Trans: 0,
         NonBinary: 0,
-        PreferNotToAnswer: 0
+        PreferNotToAnswer: 0,
+        Male: 0
       },
       schools: {},
       grade: {

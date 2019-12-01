@@ -41,7 +41,7 @@ var profile = {
   gender: {
     type: String,
     enum : {
-      values: 'Female Trans NonBinary PreferNotToAnswer'.split(' ')
+      values: 'Female Trans NonBinary PreferNotToAnswer Male'.split(' ')
     }
   },
 
