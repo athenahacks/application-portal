@@ -81,10 +81,6 @@ angular.module('reg')
         return !$scope.user.profile.adult;
       }
 
-      function wantsSponsorInfo() {
-        return !$scope.user.profile.sponsors;
-      }
-
       function minorsAreAllowed() {
         return Settings.data.allowMinors;
       }

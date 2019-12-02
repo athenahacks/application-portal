@@ -371,8 +371,7 @@ schema.statics.getByToken = function(token, callback){
 
 schema.statics.validateProfile = function(profile, cb){
   return cb(!(
-    profile.fname.length > 0 &&
-    profile.lname.length > 0 &&
+    profile.name.length > 0 &&
     profile.school.length > 0 
     ));
 };
