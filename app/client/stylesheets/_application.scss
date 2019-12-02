@@ -33,6 +33,10 @@
     color: $font-color;
   }
 
+  select option {
+    background: $primary;
+  }
+
   label {
     color: $secondary;
   }
