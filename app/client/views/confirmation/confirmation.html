@@ -1,4 +1,4 @@
-<div class="page">
+<div id="confirmation" class="page">
   <div class="divided title page-header">
     Confirmation
   </div>
@@ -20,13 +20,12 @@
             <input type="tel"
                    name="phone"
                    ng-model="user.confirmation.phoneNumber"
-                   ng-pattern="/?\d{3}[- ]?\d{3}[- ]?\d{4}$/"
                    placeholder="xxx-xxx-xxxx"              
                    required>
           </div>
 
           <div class="field">
-            <label> What is your birthdate?</label>
+            <label> What is your birthdate? </label>
             <input type="date"
                    name="birthdate"
                    ng-model="user.confirmation.birthdate" 
