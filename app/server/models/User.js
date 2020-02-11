@@ -348,7 +348,9 @@ schema.statics.verifyTempAuthToken = function(token, callback){
     return callback(null, payload.id);
   });
 };
-
+/**
+* @param  {String}   email    User's email.
+*/
 schema.statics.findOneByEmail = function(email){
   return this.findOne({
     email: email.toLowerCase()
