@@ -67,7 +67,7 @@ function calculateStats(){
     bus: {
       'No': 0,
       'UCLA': 0,
-      'UCR': 0,
+      'UCSD': 0,
       'UCI': 0,
       'CalPolySLO': 0
     },

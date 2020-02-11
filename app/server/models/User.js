@@ -129,7 +129,7 @@ var confirmation = {
   bus: {
     type: String,
     enum: {
-      values: 'No UCR UCLA UCI CalPolySLO'.split(' ')
+      values: 'No UCSD UCLA UCI CalPolySLO'.split(' ')
     }
   },
 
