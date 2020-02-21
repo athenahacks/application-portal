@@ -69,7 +69,7 @@ function calculateStats(){
       'UCR': 0,
       'UCSD': 0,
       'UCI': 0,
-      'CalPolySLO': 0
+      'CPP': 0
     },
 
     lyft: 0,
