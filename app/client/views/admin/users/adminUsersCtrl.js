@@ -276,6 +276,12 @@ angular.module('reg')
                 },{
                   name: 'Transportation',
                   value: user.profile.transportation
+                },{
+                  name: 'MLH Code of Conduct',
+                  value: user.profile.mlh
+                },{
+                  name: 'MLH Auth',
+                  value: user.profile.mlhauth
                 }
   
               ]
@@ -324,12 +330,6 @@ angular.module('reg')
                 },{
                   name: 'Notes',
                   value: user.confirmation.notes
-                },{
-                  name: 'MLH Code of Conduct',
-                  value: user.confirmation.mlh
-                },{
-                  name: 'MLH Auth',
-                  value: user.confirmation.mlhauth
                 }
               ]
             }
