@@ -13,7 +13,7 @@
         <fieldset ng-disabled="pastConfirmation">
 
           <div class="field">
-            <label> What is your phone number? (format: xxx-xxx-xxxx) </label>
+            <label> What is your phone number? (format: xxx-xxx-xxxx) <span style="color: red">*</span> </label>
             <p>
               Don’t worry, we’ll only use it for emergency contacts/updates.
             </p>
@@ -25,7 +25,7 @@
           </div>
 
           <div class="field">
-            <label> What is your birthdate? </label>
+            <label> What is your birthdate? <span style="color: red">*</span> </label>
             <input type="date"
                    name="birthdate"
                    ng-model="user.confirmation.birthdate" 
@@ -47,7 +47,7 @@
           </div>
 
           <div class="field">
-            <label> What is your graduation year?</label>
+            <label> What is your graduation year? <span style="color: red">*</span></label>
             <input type="number"
                    name="gradYear"
                    ng-model="user.confirmation.gradYear" 
@@ -89,7 +89,7 @@
 
 
           <div class="field">
-            <label> Shirt Size </label>
+            <label> Shirt Size <span style="color: red">*</span></label>
             <p>
               Yay free clothes! Heads up, these will be women's size shirts, so they tend to run small. 
             </p>
@@ -130,7 +130,7 @@
           </div>
 
           <div class="field">
-            <label> Will you need a bus spot from any of these locations? </label>
+            <label> Will you need a bus spot from any of these locations? <span style="color: red">*</span></label>
             <select
               name="bus"
               ng-model="user.confirmation.bus"
@@ -158,7 +158,7 @@
           <div class="divided title">Emergency Contact (Safety First!)</div>
 
           <div class="field">
-            <label> Emergency contact name </label>
+            <label> Emergency contact name <span style="color: red">*</span></label>
             
             <input type="text"
                    name="econtact"
@@ -167,7 +167,7 @@
           </div>
 
           <div class="field">
-            <label> Emergency contact number </label>
+            <label> Emergency contact number <span style="color: red">*</span></label>
             
             <input type="tel"
                    name="enumber"
