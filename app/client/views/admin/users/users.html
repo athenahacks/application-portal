@@ -154,7 +154,7 @@
             <th>Name</th>
             <th>E-mail address</th>
             <th>School</th>
-            <th>Adult</th>
+            <th>Diet</th>
             <th>V/S/A/C</th>
             <th></th>
             <th></th>
@@ -175,14 +175,14 @@
             <td>{{user.email}}</td>
             <td>{{user.profile.school}}</td>
             <td>
-              <i
-                ng-if="user.profile.adult"
+              {<i
+                ng-if="user.confirmation.vegetarian || user.confirmation.vegan || user.confirmation.glutenfree"
                 class="green check circle icon">
               </i>
               <i
-                ng-if="!user.profile.adult"
+                ng-if="!user.confirmation.vegetarian && !user.confirmation.vegan && !user.confirmation.glutenfree"
                 class="red remove circle icon">
-              </i>
+              </i>}
             </td>
             <td
               class="collapsing">
