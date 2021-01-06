@@ -26,6 +26,14 @@
                  ng-model="user.email">
         </div>
 
+        <div class="field">
+          <label> Mailing Address (optional) </label>
+          <p>Please provide your mailing address if you would like to receive AthenaHacks swag after our hackathon. We will keep this information private. </p>
+          <input type="text"
+                  name="address"
+                  ng-model="user.profile.address">
+        </div>
+
         <div class="field" ng-show="autoFilledSchool">
           <label> School </label>
           <input class="ui input"
@@ -96,14 +104,14 @@
           </select>
         </div>
 
-        <div class="field">
+        <!-- <div class="field">
           <label>Transportation</label>
           <p>We will send out buses to schools based on interest. Unfortunately, we will not be able to provide mileage reimbursement this year. </p>       
           <div class="ui checkbox">
             <input type="checkbox" id="transportation" ng-model="user.profile.transportation">
             <label for="transportation">I will require transportation assistance</label>
           </div>
-        </div>
+        </div> -->
         
         <br>
         <br>
@@ -144,7 +152,7 @@
 
         <div class="field">
           <label>
-            What excites you?
+            What excites you? This can be something within technology or beyond.
           </label>
           <p>
             We want to make AthenaHacks an amazing learning experience for you! You don't need any experience in any of the following topics. That's what we're here for!
@@ -162,7 +170,19 @@
 
         <div class="field">
           <label>
-            Will you be 18 or older by March 7th, 2020?
+            Will you have access to a laptop/computer and an internet connection the weekend of March 6th, 2021?
+          </label>
+          <p>
+            If not, please explain further so we may best assist you. 
+            (Note: We are collecting this information to gauge interest and resources.)
+          </p>
+          <textarea ng-model="user.profile.computer">
+          </textarea>
+        </div>
+
+        <div class="field">
+          <label>
+            Will you be 18 or older by March 6th, 2021?
           </label>
           <p>
             You need to be at least 18 years old to attend AthenaHacks if you are not a current USC student.

@@ -19,6 +19,12 @@ var profile = {
     max: 100,
   },
 
+  address: {
+    type: String,
+    min: 1,
+    max: 500,
+  },
+
   school: {
     type: String,
     min: 1,
@@ -79,6 +85,12 @@ var profile = {
     type: String,
     min: 0,
     max: 1000
+  },
+
+  computer: {
+    type: String,
+    min: 0,
+    max: 1500
   },
 
   adult: {

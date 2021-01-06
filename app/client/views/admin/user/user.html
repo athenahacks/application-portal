@@ -82,6 +82,13 @@
                ng-model="selectedUser.email">
       </div>
 
+      <div class="field">
+        <label> Mailing Address (optional) </label>
+        <input type="text"
+                name="address"
+                ng-model="selectedUser.profile.address">
+      </div>
+
       <div class="field" ng-show="autoFilledSchool">
         <label> School </label>
         <input class="ui input"
