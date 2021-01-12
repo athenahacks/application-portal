@@ -1,6 +1,6 @@
 // Load the dotfiles.
 require('dotenv').load({silent: true});
-console.log('dotfiles loaded');
+// console.log('dotfiles loaded');
 var express         = require('express');
 
 // Middleware!
@@ -17,9 +17,10 @@ var settingsConfig  = require('./config/settings');
 var adminConfig     = require('./config/admin');
 
 var app             = express();
-console.log("about to connect to mongo")
+// console.log("about to connect to mongo")
 // Connect to mongodb
-mongoose.connect(database, {useMongoClient: true});
+// mongoose.connect(database, {useMongoClient: true});
+mongoose.connect(database, { useNewUrlParser: true });
 
 app.use(morgan('dev'));
 
@@ -33,7 +34,7 @@ app.use(methodOverride());
 app.use(express.static(__dirname + '/app/client'));
 
 // Routers =====================================================================
-console.log("about to do routers")
+// console.log("about to do routers")
 var apiRouter = express.Router();
 require('./app/server/routes/api')(apiRouter);
 app.use('/api', apiRouter);
