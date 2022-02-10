@@ -24,7 +24,7 @@
     "moment": "^2.24.0",
     "mongoose": "^5.7.7",
     "morgan": "^1.6.1",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "nodemailer": "^1.4.0",
     "nodemailer-smtp-transport": "^1.0.3",
     "passport-local": "^1.0.0",
